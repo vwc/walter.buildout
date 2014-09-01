@@ -1,44 +1,385 @@
-//
-// Application stylesheet
-// -----------------------------------------------
-
-.app-toolbar + .app-navbar {
-    margin-top: @navbar-height;
+/**
+ * styles for walter.sitetheme
+ */
+.navbar-inverse .navbar-toggle ul
+{
+    margin-top: 100px;
 }
-
-.app-header {
-    .jumbotron();
-    display: none;
+body
+{
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
+body
+{
+    margin: 0;
 
-.app-sign {
-    display: inline-block;
-    .square(@navbar-height);
-    padding: ceil(@line-height-computed / 2);
-    border: ceil(@line-height-computed / 4) solid @gray-lighter;
-    border-radius: floor(@navbar-height / 2);
-    color: @gray-lighter;
-    font-size:f loor(@navbar-height / 2);
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+#werkstatt
+{
+    margin-top: 50px;
+}
+#werkbody p
+{
+    font-size: 1.9em;
+
+    text-transform: uppercase;
+}
+#werkbody .arrow
+{
+    padding: 10px 32px 5px 38px;
+
+    background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
+}
+#werkbody a
+{
+    font-size: .6em;
+
+    color: #fff;
+}
+#service ul
+{
+    list-style: none;
+}
+#service .extra
+{
+    border-width: 0 4px 0 0;
+    border-style: solid;
+    -webkit-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+         -o-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+            border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
+}
+#service a
+{
+    font-size: 1.5em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #313337;
+}
+#service a:hover
+{
+    color: #629294;
+}
+#service h5 a
+{
+    color: #9d998c;
+}
+#service h5 a:hover
+{
+    color: #629294;
+}
+#service
+{
+    margin-top: 50px;
+}
+.deco
+{
+    padding: 10px 55px 10px 55px;
+}
+.contentline
+{
+    position: center;
+
+    margin-bottom: 20px;
+
+    list-style: none;
+}
+.contentline .line
+{
+    height: 10px;
+    padding-bottom: 60px;
+
+    background: url(../../img/line.png) 50% 100% no-repeat transparent;
+}
+.contentline .lineheader h1
+{
+    font-family: 'Brush Script MT', 'italic';
+    font-size: 4em;
+
+    padding-bottom: 25px;
+
     text-align: center;
-    line-height: 1;
-    &.app-sign-large {
-        .square((@navbar-height * 2));
-        padding: @line-height-computed;
-        border-radius: @navbar-height;
-        font-size: @navbar-height;
-    }
-    &.app-sign-draggable {
-        border: none;
-    }
-    .icon-bar {
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-        border-color: @gray-dark;
-        background-color: @navbar-default-toggle-icon-bar-bg;
-    }
-    .icon-bar + .icon-bar {
-        margin-top: 4px;
-    }
+
+    color: #cfb02a;
+    text-shadow: -1px -2px #7e6b18;
+}
+.app-box-body
+{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.app-header
+{
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.app-header p
+{
+    font-size: 1.9em;
+
+    text-transform: uppercase;
+}
+.app-header #fb
+{
+    padding: 0 20px 4px 20px;
+}
+.app-header .arrow
+{
+    padding: 10px 32px 5px 38px;
+
+    background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
+}
+.app-header a
+{
+    font-size: .6em;
+
+    color: #fff;
+}
+.collapse.navbar-collapse.app-navbar-collapse
+{
+    width: 100%;
+
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.app-navbar
+{
+    width: 100%;
+    height: 100px;
+
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.navbar-nav li .star
+{
+    margin-top: 17px;
+}
+
+
+.app-brandbar
+{
+    width: 100%;
+    height: 310px;
+
+    background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+    background-color: #d7d7d7;
+}
+.documentFirstHeading
+{
+    font-family: 'Brush Script MT', 'italic';
+    font-size: 5em;
+
+    margin-top: 170px;
+    margin-bottom: 24px;
+
+    text-align: center;
+
+    color: #fff;
+}
+.documentDescription
+{
+    font-size: 1.5em;
+
+    margin-top: 60px;
+}
+@media only screen and (min-width: 767px) {
+ .logo
+{
+    position: center;
+
+    display: block;
+
+    width: 100%;
+    height: 290px;
+
+    background: url(../../img/logobutton_big.png) 50% 50% no-repeat transparent;
+}
+}
+
+@media only screen and (max-width: 767px) {
+
+}
+.logo
+{
+    position: center;
+
+    display: block;
+
+    width: 100%;
+    height: 290px;
+
+}
+.navbar-brand
+{
+    position: center;
+
+    display: block;
+
+    width: 100%;
+    height: 100px;
+
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.section-front-page .app-brandbar
+{
+    width: 100%;
+    height: 445px;
+
+    background: url(../../img/galeriedefault.jpg) 50% 100% no-repeat transparent;
+    background-color: #d7d7d7;
+}
+.section-front-page #headericon
+{
+    width: 100%;
+    height: 145px;
+    margin-top: -100px;
+
+    background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
+}
+#headericon
+{
+    width: 100%;
+    height: 145px;
+    margin-top: -100px;
+}
+#zacken
+{
+    width: 100%;
+    height: 10px;
+
+    background: url(../../img/zacken.png) 50% 100% repeat-x transparent;
+}
+#zacken-rotate
+{
+    width: 100%;
+    height: 10px;
+    margin-top: -10px;
+
+    background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+}
+.section-idee .content-line
+{
+    position: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.section-idee .content-line .dotline-left
+{
+    padding-top: 2%;
+
+    background: url(../../img/line.png) 50% 50% no-repeat transparent;
+}
+.section-idee .content-line .dotline-right
+{
+    padding-top: 2%;
+
+    background: url(../../img/line.png) 50% 50% no-repeat transparent;
+}
+.section-idee .content-line .tristar
+{
+    position: center;
+
+    height: 20px;
+
+    background: url(../../img/star_trio.png) 50% 0 no-repeat transparent;
+}
+.app-footer
+{
+    padding-top: 100px;
+
+    color: #fff;
+    background-color: #313337;
+}
+.app-footer a
+{
+    color: #fff;
+}
+.app-footer img
+{
+    margin-right: 10px;
+}
+#footerlogo
+{
+    margin-bottom: -39px;
+}
+#footernav
+{
+    font-size: 1em;
+
+    max-width: 960px;
+}
+#footernav ul
+{
+    max-width: 960px;
+
+    list-style: none;
+}
+#footernav ul li
+{
+    display: inline-block;
+
+    padding-left: 5px;
+}
+#footernav a
+{
+    font-size: 1em;
+
+    padding: 2px;
+
+    text-decoration: none;
+}
+#footernav a:hover
+{
+    padding: 2px;
+
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.part
+{
+    text-align: center;
+}
+#footerline
+{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#footerline .dotline
+{
+    padding-top: 2%;
+
+    background: url(../../img/trennlinie_small.png) 50% 50% no-repeat transparent;
+}
+#footerline .tristar
+{
+    position: center;
+
+    height: 20px;
+
+    background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
+}
+.app-page
+{
+    margin-top: -300px;
+}
+.documentFirstHeading
+{
+    margin-top: 30px;
+    padding-bottom: 120px;
+
+    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+}
+.documentDescription
+{
+    margin-bottom: 50px;
+}
+
+#facebook {
+    background: url(../../img/fbbanner.png) 50% 50% no-repeat transparent;
+    width: 50px;
+    height: 100px;
+    margin-top: -106px;
+    float: right;
 }
