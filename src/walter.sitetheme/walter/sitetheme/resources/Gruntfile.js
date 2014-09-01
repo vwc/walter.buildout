@@ -198,7 +198,7 @@ module.exports = function (grunt) {
             recursive: true
           },
           cleanImgPath: {
-            path: '<%= appconfig.dist %>/',
+            path: 'dist/',
             pattern: '../assets/img/',
             replacement: 'assets/img/',
             recursive: true
