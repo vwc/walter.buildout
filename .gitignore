@@ -24,10 +24,7 @@ var
 *.pyo
 *-ck.js
 etc/**/*
-src/plone.app.blocks
-src/plone.app.contenttypes
-src/plone.app.tiles
-src/plone.tiles
+src/plone.*
 src/ade25.*
 src/vwc.*
 src/sauna.reload
