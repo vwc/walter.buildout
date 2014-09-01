@@ -179,24 +179,30 @@ module.exports = function (grunt) {
         },
 
         sed: {
-            'clean-source-assets': {
-                path: 'dist/',
-                pattern: '../../assets/',
-                replacement: '../assets/',
-                recursive: true
-            },
-            'clean-source-css': {
-                path: 'dist/',
-                pattern: '../dist/css/styles.css',
-                replacement: 'css/styles.css',
-                recursive: true
-            },
-            'clean-source-js': {
-                path: 'dist/',
-                pattern: '../dist/js/rms.js',
-                replacement: 'js/rms.min.js',
-                recursive: true
-            }
+          cleanAssetsPath: {
+            path: 'dist/',
+            pattern: '../../assets/',
+            replacement: '../assets/',
+            recursive: true
+          },
+          cleanCSS: {
+            path: 'dist/',
+            pattern: '../dist/css/<%= pkg.name %>.min.css',
+            replacement: 'css/<%= pkg.name %>.min.css',
+            recursive: true
+          },
+          cleanJS: {
+            path: 'dist/',
+            pattern: '../dist/js/<%= pkg.name %>.min.js',
+            replacement: 'js/<%= pkg.name %>.min.js',
+            recursive: true
+          },
+          cleanImgPath: {
+            path: '<%= appconfig.dist %>/',
+            pattern: '../assets/img/',
+            replacement: 'assets/img/',
+            recursive: true
+          },
         },
 
         validation: {
