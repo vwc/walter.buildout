@@ -1,201 +1,258 @@
 <!doctype html>
-<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><!--<![endif]-->
+
+
+<html lang="en">
   <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="author" content="">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-<title>
-  
-    Getting started &middot; Bootstrap
-  
-</title>
+  <title>
+    My Carman - your car we care
+  </title>
 
-<!-- Bootstrap core CSS -->
-<link href="../dist/css/walter.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../dist/css/walter.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://localhost:9001bower_components/html5shiv/html5shiv.js"></script>
+    <script src="../bower_components/respond/respond.min.js"></script>
+  <![endif]-->
 
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-                               <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  <script src="http://localhost:8499/livereload.js"></script>
   </head>
+
   <body>
     <a class="sr-only" href="#content">Skip navigation</a>
     <div class="navbar navbar-default navbar-fixed-top app-toolbar" id="app-toolbar">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-toolbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">CMS Toolbar</a>
-    </div>
-    <div class="navbar-collapse collapse app-toolbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Contents</a></li>
-          <li><a href="#about">View</a></li>
-          <li><a href="#contact">Edit</a></li>
-          <li><a href="#contact">Share</a></li>
-          <li><a href="#contact">Content rules</a></li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-          <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="/author/123456789">
-              <span>John Doe</span>
-              <b class="caret">
-            </b></a>
-            <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
-                <a href="/dashboard">My workspace</a>
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-toolbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">My Carman</a>
+      </div>
+      <div class="navbar-collapse collapse app-toolbar-collapse">
+          <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Contents</a></li>
+              <li><a href="#about">View</a></li>
+              <li><a href="#contact">Edit</a></li>
+              <li><a href="#contact">Share</a></li>
+              <li><a href="#contact">Content rules</a></li>
+          </ul>
+          <ul class="nav navbar-nav pull-right">
+            <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="/author/123456789">
+                <span>John Doe</span>
+                <b class="caret">
+              </b></a>
+              <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
+                  <a href="/dashboard">My workspace</a>
+                </li>
+                <li id="plone-personal-actions-preferences">
+                  <a href="/preferences">Settings</a>
+                </li>
+                <li id="plone-personal-actions-plone_setup">
+                  <a href="/controlpanel">Configuration</a>
+                </li>
+                <li id="plone-personal-actions-logout">
+                  <a href="/logout">Signout</a>
+                </li>
+              </ul></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Folder</a></li>
+                  <li><a href="#">Document</a></li>
+                  <li><a href="#">Image</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Settings</li>
+                  <li><a href="#">Filter options</a></li>
+                  <li><a href="#">Add...</a></li>
+                </ul>
               </li>
-              <li id="plone-personal-actions-preferences">
-                <a href="/preferences">Settings</a>
-              </li>
-              <li id="plone-personal-actions-plone_setup">
-                <a href="/controlpanel">Configuration</a>
-              </li>
-              <li id="plone-personal-actions-logout">
-                <a href="/logout">Signout</a>
-              </li>
-            </ul></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Folder</a></li>
-                <li><a href="#">Document</a></li>
-                <li><a href="#">Image</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Settings</li>
-                <li><a href="#">Filter options</a></li>
-                <li><a href="#">Add...</a></li>
-              </ul>
-            </li>
-        </ul>
-    </div><!--/.nav-collapse -->
-</div>
+          </ul>
+       </div><!--/.nav-collapse -->
+  </div>
     <!-- App master nav -->
     <nav class="navbar navbar-default app-navbar" id="app-navbar" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">Brand</a>
-  </div>
-
-  <p class="navbar-text pull-right">Signed in as <a href="#" class="navbar-link">John Doe</a></p>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse app-navbar-collapse">
-    <ul class="nav navbar-nav" id="app-navbar-nav">
-      <li class="active"><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-    <form class="navbar-form navbar-left" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+<div class="row">
+  <div class="navbar-brand">
+  <div class="center-block"><a class="logo" href="#"></a></div>
 
-    <div class="app-brandbar">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-lg-8">
-                <a class="app-brand" href="/">
-                    <div class="app-sign">a</div>
-                    <span class="h3 app-brandname">App Brandname</span>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-lg-4">
-                <p class="h5 app-brand-claim">
-                    Brand specific claim or info
-                </p>
-            </div>
+  </div>
+  </div>
+  <a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a>
+      <div class="collapse navbar-collapse app-navbar-collapse">
+        <div class="container">
+
+          <div class="row">
+          <div class="col-xs-12 col-md-5">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="/walter/idee">IDEE</a></li>
+              <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+              </li>
+              <li><a href="/walter/carspecial">CAR SPECIAL</a></li>
+              <li>
+                <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+              </li>
+              <li><a href="/walter/gebrauchtwagen">GEBRAUCHTWAGEN</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-md-3"></div>
+          <div class="col-xs-12 col-md-4">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/walter/neuwagen">NEUWAGEN</a></li>
+                <li>
+                  <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/walter/werkstatt">WERKSTATT</a></li>
+                <li>
+                  <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
+                </li>
+                <li><a href="/walter/kontakt">KONTAKT</a></li>
+            </ul>
+          </div>
+          </div>
         </div>
-    </div>
-</div>
 
+
+
+      </div><!-- /.navbar-collapse -->
+      <div class="container" id="zacken"></div>
+  </nav>
+
+  <div class="app-brandbar">
+        <div class="container"></div>
+    </div> <!-- /.app-brandbar -->
+  <div class="container" id="zacken-rotate"></div>
+    <div class="container" id="headericon">
+
+    </div>
     <div class="app-header">
       <div class="container">
-        <h1>Getting started</h1>
-        <p>An overview of the new diazo theme</p>
+
       </div>
-    </div>
+    </div>  <!-- /.app-header -->
 
     <div class="container">
-        <div role="main">
-          <main class="app-content-body">
-  <div class="container app-page" id="content">
-    <div class="jumbotron">
-      <h1>Boilerplate theme template
-        <small>Kickstart your development</small>
-      </h1>
+      <div role="main">
+        <main class="app-content-body">
+          <div class="container app-page" id="content">
+            <div class="jumbotron">
+                       <h1>Boilerplate theme template
+                          {{ page.title }}
+                      </h1>
+            </div>
+            <div class="app-page-header">
+              <div class="page-header"></div>
+                <h1>Yo - this is your new theme</h1>
+              </div>
+                        <p class="lead">This template was generated for you by our Yeoman
+                        Diazo theme package.</p>
+          </div>
+        </main>
+      </div>
     </div>
-    <div class="app-page-header">
-        <div class="page-header">
-            <h1>Yo - this is your new theme</h1>
-        </div>
-        <p class="lead">This template was generated for you by our Yeoman
-            Diazo theme package.</p>
-    </div>
-  </div>
-</main>
-        </div>
-    </div>
-    
+    <div class="app-content">
+      <div class="container" role="main">
+      <div class="row" id="service">
+                <div class="col-xs-12 col-md-4">
+                    <ul class="extra">
+                      <li><h5><a href="/service#wartungsservice">WARTUNGSSERVICE</a></h5></li>
+                      <li><a href="/service#diagnose">DIAGNOSE</a></li>
+                      <li><a href="/service#programmierung">PROGRAMMIERUNG</a></li>
+                      <li><a href="/service#karosseriearbeiten">KAROSSERIEARBEITEN</a></li>
+                      <li><a href="/service#huau">HU/AU</a></li>
+                      <li><a href="/service#klimaservice">KLIMASERVICE</a></li>
+                      <li><a href="/service#reifenwechsel">REIFENWECHSEL</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <ul class="extra">
+                      <li><h5><a href="/service#schadensservice">SCHADENSSERVICE</a></h5></li>
+                      <li><a href="/service#abschleppdienst">ABSCHLEPPDIENST</a></li>
+                      <li><a href="/service#schadensabwicklung">SCHADENSABWICKLUNG</a></li>
+                      <li><a href="/service#reperatur">REPERATUR</a></li>
+                      <li><a href="/service#unfallinstandsetzung">UNFALLINSTANDSETZUNG</a></li>
+                      <li><a href="/service#autoglasservice">AUTOGLASSERVICE</a></li>
+                      <li><a href="/service#ankaufvonunfallwagen">ANKAUF VON UNFALLWAGEN</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <ul>
+                      <li><h5><a href="/service#finanzierungsservice">FINANZIERUNGSSERVICE</a></h5></li>
+                      <li><a href="/service#reparaturfinanzierung">REPARATURFINANZIERUNG</a></li>
+                      <li><a href="/service#kauffinanzierung">KAUFFINANZIERUNG</a></li>
+                      <li><a href="/service#leasing">LEASING</a></li>
+                      <li><a href="/service#anhaengervermietung">ANHÄNGERVERMIETUNG</a></li>
+                      <li><a href="/service#holundbringservice">HOL-& BRINGSERVICE</a></li>
+                      <li><a href="/service#verkaufvonzubehoer">VERKAUF VON ZUBEHÖR <br> UND PFLEGE, TUNING</a></li>
+                    </ul>
+                </div>
+            </div>
+      </div> <!-- /.container -->
+    </div> <!-- /.app-content" -->
+     <img id="footerlogo" class="center-block" src="/++theme++walter.sitetheme/img/logo_footer.jpg" />
     <footer class="app-footer" id="app-footer" role="contentinfo">
-    <div class="container">
-        <p>Designed and built by <a href="http://meetshaus.de" target="_blank">Ade25</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-    </div>
-</footer>
-    <!-- JS and analytics only. -->
+      <div class="container">
+        <div class="row" id="kontakt">
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/map.png" />Hauptstraße 24,<br>86450 Altenmünster</div>
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/telefon.png" />+ 49 82 95 - 12 34</div>
+          <div class="col-xs-12 col-md-4 part"><img src="/++theme++walter.sitetheme/img/email.png" /><a href="mailto:post@my-carman.de">post@my-carman.de</a></div>
+        </div>
+        <div class="row" id="footerline">
+          <div class="col-xs-12 col-md-5 dotline"></div>
+          <div class="col-xs-12 col-md-2 tristar"></div>
+          <div class="col-xs-12 col-md-5 dotline"></div>
+        </div>
+        <div id="footernav" class="center-block">
+          <ul>
+            <li>&copy;2014 Auto S.Walter |<li>
+            <li><a href="/special-car" rel="nofollow">Special Car |</a><li>
+            <li><a href="/neuwagen" rel="nofollow">Neuwagen |</a><li>
+            <li><a href="/gebrauchtwagen" rel="nofollow">Gebrauchtwagen |</a><li>
+            <li><a href="/kontakt" rel="nofollow">Kontakt |</a><li>
+            <li><a href="/impressum" rel="nofollow">Impressum |</a><li>
+            <li><a href="/agbs" rel="nofollow">AGBs</a><li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+      <!-- JS and analytics only. -->
     <!-- Defered JavaScript Loader
 (see: http://www.feedthebot.com/pagespeed/defer-loading-javascript.html)
 ================================================== -->
 <script type="text/javascript">
 function downloadJSAtOnload() {
 var element = document.createElement("script");
-element.src = "../dist/js/walter.js";
+element.src = "../dist/js/example.js";
 document.body.appendChild(element);
 }
 if (window.addEventListener)
@@ -220,6 +277,5 @@ else window.onload = downloadJSAtOnload;
   })();
 </script>
     </div>
-
   </body>
 </html>
