@@ -17,7 +17,7 @@ env.hosts = ['z8']
 env.webserver = '/opt/webserver/buildout.webserver'
 env.code_root = '/opt/sites/walter/buildout.walter'
 env.local_root = '/Users/cb/dev/walter/buildout.walter'
-env.sitename = 'plonesite'
+env.sitename = 'walter'
 env.code_user = 'root'
 env.prod_user = 'www'
 
