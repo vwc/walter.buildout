@@ -1,385 +1,1132 @@
 /**
  * styles for walter.sitetheme
  */
-.navbar-inverse .navbar-toggle ul
-{
+
+/**
+ * header
+ */
+
+/* navbar */
+
+.navbar-inverse .navbar-toggle ul {
     margin-top: 100px;
 }
-body
-{
+
+
+
+#logobar {
+    margin-top: -10em;
+    position: relative;
+    z-index: 4;
+}
+
+.app-navbar {
     background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
-body
-{
-    margin: 0;
 
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
-}
-#werkstatt
-{
-    margin-top: 50px;
-}
-#werkbody p
-{
-    font-size: 1.9em;
-
-    text-transform: uppercase;
-}
-#werkbody .arrow
-{
-    padding: 10px 32px 5px 38px;
-
-    background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
-}
-#werkbody a
-{
-    font-size: .6em;
-
-    color: #fff;
-}
-#service ul
-{
-    list-style: none;
-}
-#service .extra
-{
-    border-width: 0 4px 0 0;
-    border-style: solid;
-    -webkit-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
-         -o-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
-            border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
-}
-#service a
-{
-    font-size: 1.5em;
-
-    text-decoration: none;
-    text-transform: uppercase;
-
-    color: #313337;
-}
-#service a:hover
-{
-    color: #629294;
-}
-#service h5 a
-{
-    color: #9d998c;
-}
-#service h5 a:hover
-{
-    color: #629294;
-}
-#service
-{
-    margin-top: 50px;
-}
-.deco
-{
-    padding: 10px 55px 10px 55px;
-}
-.contentline
-{
-    position: center;
-
-    margin-bottom: 20px;
-
-    list-style: none;
-}
-.contentline .line
-{
-    height: 10px;
-    padding-bottom: 60px;
-
-    background: url(../../img/line.png) 50% 100% no-repeat transparent;
-}
-.contentline .lineheader h1
-{
-    font-family: 'Brush Script MT', 'italic';
-    font-size: 4em;
-
-    padding-bottom: 25px;
-
-    text-align: center;
-
-    color: #cfb02a;
-    text-shadow: -1px -2px #7e6b18;
-}
-.app-box-body
-{
-    margin-top: 20px;
-    margin-bottom: 35px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-.app-header
-{
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
-}
-.app-header p
-{
-    font-size: 1.9em;
-
-    text-transform: uppercase;
-}
-.app-header #fb
-{
-    padding: 0 20px 4px 20px;
-}
-.app-header .arrow
-{
-    padding: 10px 32px 5px 38px;
-
-    background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
-}
-.app-header a
-{
-    font-size: .6em;
-
-    color: #fff;
-}
-.collapse.navbar-collapse.app-navbar-collapse
-{
-    width: 100%;
-
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
-}
-.app-navbar
-{
-    width: 100%;
-    height: 100px;
-
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
-}
-.navbar-nav li .star
-{
+.navbar-nav li .star {
     margin-top: 17px;
 }
 
-
-.app-brandbar
-{
+#zacken {
     width: 100%;
-    height: 310px;
-
-    background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
-    background-color: #d7d7d7;
-}
-.documentFirstHeading
-{
-    font-family: 'Brush Script MT', 'italic';
-    font-size: 5em;
-
-    margin-top: 170px;
-    margin-bottom: 24px;
-
-    text-align: center;
-
-    color: #fff;
-}
-.documentDescription
-{
-    font-size: 1.5em;
-
-    margin-top: 60px;
-}
-@media only screen and (min-width: 767px) {
- .logo
-{
-    position: center;
-
-    display: block;
-
-    width: 100%;
-    height: 290px;
-
-    background: url(../../img/logobutton_big.png) 50% 50% no-repeat transparent;
-}
-}
-
-@media only screen and (max-width: 767px) {
-
-}
-.logo
-{
-    position: center;
-
-    display: block;
-
-    width: 100%;
-    height: 290px;
-
-}
-.navbar-brand
-{
-    position: center;
-
-    display: block;
-
-    width: 100%;
-    height: 100px;
-
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
-}
-.section-front-page .app-brandbar
-{
-    width: 100%;
-    height: 445px;
-
-    background: url(../../img/galeriedefault.jpg) 50% 100% no-repeat transparent;
-    background-color: #d7d7d7;
-}
-.section-front-page #headericon
-{
-    width: 100%;
-    height: 145px;
-    margin-top: -100px;
-
-    background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
-}
-#headericon
-{
-    width: 100%;
-    height: 145px;
-    margin-top: -100px;
-}
-#zacken
-{
-    width: 100%;
-    height: 10px;
-
+    height: 1em;
     background: url(../../img/zacken.png) 50% 100% repeat-x transparent;
+    position:relative;
+    z-index: 3;
+    top: -20.5em;
 }
-#zacken-rotate
-{
+.section-front-page {
+    #zacken-rotate {
+        width: 100%;
+        height: 1em;
+        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+        position: relative;
+        top: -2.5em;
+        z-index: 7
+    }   
+}
+#zacken-rotate {
     width: 100%;
-    height: 10px;
-    margin-top: -10px;
-
+    height: 1em;
     background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+    position: relative;
+    top: -1em;
+    z-index: 7
 }
-.section-idee .content-line
-{
-    position: center;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.section-idee .content-line .dotline-left
-{
-    padding-top: 2%;
-
-    background: url(../../img/line.png) 50% 50% no-repeat transparent;
-}
-.section-idee .content-line .dotline-right
-{
-    padding-top: 2%;
-
-    background: url(../../img/line.png) 50% 50% no-repeat transparent;
-}
-.section-idee .content-line .tristar
-{
-    position: center;
-
-    height: 20px;
-
-    background: url(../../img/star_trio.png) 50% 0 no-repeat transparent;
-}
-.app-footer
-{
-    padding-top: 100px;
-
-    color: #fff;
-    background-color: #313337;
-}
-.app-footer a
-{
-    color: #fff;
-}
-.app-footer img
-{
-    margin-right: 10px;
-}
-#footerlogo
-{
-    margin-bottom: -39px;
-}
-#footernav
-{
-    font-size: 1em;
-
-    max-width: 960px;
-}
-#footernav ul
-{
-    max-width: 960px;
-
-    list-style: none;
-}
-#footernav ul li
-{
-    display: inline-block;
-
-    padding-left: 5px;
-}
-#footernav a
-{
-    font-size: 1em;
-
-    padding: 2px;
-
-    text-decoration: none;
-}
-#footernav a:hover
-{
-    padding: 2px;
-
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-}
-.part
-{
-    text-align: center;
-}
-#footerline
-{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-#footerline .dotline
-{
-    padding-top: 2%;
-
-    background: url(../../img/trennlinie_small.png) 50% 50% no-repeat transparent;
-}
-#footerline .tristar
-{
-    position: center;
-
-    height: 20px;
-
-    background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
-}
-.app-page
-{
-    margin-top: -300px;
-}
-.documentFirstHeading
-{
-    margin-top: 30px;
-    padding-bottom: 120px;
-
+#headericon {
+    width: 100%;
+    height: 5em;
+    margin-top: 1em;
     background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+
 }
-.documentDescription
-{
-    margin-bottom: 50px;
+
+@media only screen and (max-width: 380px) {
+    .contentline {
+        position: center;
+        margin-bottom: 3em;
+        list-style: none;
+        .line {
+            height: 2em;
+            padding-bottom: 0;
+        }
+        .lineheader {
+            h1 {
+                font-family: 'Brush Script MT', 'italic';
+                font-size: 4em;
+                //padding-bottom: 2em;
+                text-align: center;
+                color: #cfb02a;
+                text-shadow: -1px -2px #7e6b18;
+            }
+        }
+    }
+    .karusell {
+        width: 100%;
+        margin-top: 10em;
+        position: relative;
+        z-index: 2;
+    }
+    .app-box-body {
+        padding: 3% 15% 10%;
+    }
+    .section-front-page {
+        #zacken-rotate {
+            width: 100%;
+            height: 1em;
+            background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+            position: relative;
+            top: -17em;
+            z-index: 7
+        }   
+            #headericon {
+            width: 100%;
+            height: 10em;
+            margin-top: -23em;
+            background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
+            position: relative;
+            z-index: 8;
+            background-size: 25%;
+        }
+    }
+    #zacken-rotate {
+        width: 100%;
+        height: 1em;
+        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+        position: relative;
+        top: -1em;
+        z-index: 7;
+    } 
+    .documentDescription {
+        margin-top: 9em;
+    }
+    .documentFirstHeading {
+        font-family: 'Brush Script MT', 'italic';
+        font-size: 5em;
+        color: #fff;
+        margin-top: -4em;
+        text-align:center;
+        position: relative;
+        z-index: 3;
+    }
+    .app-brandbar {
+        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        height: 18em;
+        position: relative;
+        z-index: 2;
+        margin-top: 6em;
+    }
+    #logobar {
+        margin-top: 5em;
+        position: relative;
+      }
+    .navbar-nav > li > a {
+        padding-bottom: 14px;
+        padding-left: 0.5em;
+        padding-top: 14px;
+    }
+    .app-navbar {
+        height: 6em;
+    }
+    #navigationbar {
+        position: relative;
+        z-index: 5;
+        padding-top: 1em;
+        padding-bottom: 3em;
+        background: url(../../img/background.jpg) 0 0 repeat transparent;
+        ul {
+            li a {
+                width: 100%;
+            }
+        }
+    }
+    .section-front-page .logo {
+        display: hidden;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
+    .logo {
+        display: hidden;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
 }
+@media only screen and (max-width: 980px) and (min-width: 381px) {
+    .contentline {
+        position: center;
+        margin-bottom: 3em;
+        list-style: none;
+        .line {
+            height: 2em;
+            padding-bottom: 0;
+        }
+        .lineheader {
+            h1 {
+                font-family: 'Brush Script MT', 'italic';
+                font-size: 4em;
+                //padding-bottom: 2em;
+                text-align: center;
+                color: #cfb02a;
+                text-shadow: -1px -2px #7e6b18;
+            }
+        }
+    }
+    .karusell {
+        width: 100%;
+        margin-top: 10em;
+        position: relative;
+        z-index: 2;
+    }
+    .app-box-body {
+        padding: 3% 15% 10%;
+    }
+    .section-front-page {
+        #zacken-rotate {
+            width: 100%;
+            height: 1em;
+            background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+            position: relative;
+            top: -8em;
+            z-index: 7
+        }   
+            #headericon {
+            width: 100%;
+            height: 10em;
+            margin-top: -16em;
+            background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
+            position: relative;
+            z-index: 8;
+            background-size: 25%;
+        }
+    }
+    #zacken-rotate {
+        width: 100%;
+        height: 1em;
+        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+        position: relative;
+        top: -1em;
+        z-index: 7;
+    }
+    .section-front-page .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
+    .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
+    .documentFirstHeading {
+        font-family: 'Brush Script MT', 'italic';
+        font-size: 5em;
+        color: #fff;
+        margin-top: -4em;
+        text-align:center;
+        position: relative;
+        z-index: 3;
+    }
+    .app-brandbar {
+        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        height: 18em;
+        position: relative;
+        z-index: 2;
+        margin-top: 10.3em;
+    }
+    #logobar {
+        margin-top: 5em;
+        position: relative;
+      }
+    .navbar-nav > li > a {
+        padding-bottom: 14px;
+        padding-left: 0.5em;
+        padding-top: 14px;
+    }
+    .app-navbar {
+        height: 6em;
+    }
+    #navigationbar {
+        position: relative;
+        //z-index: 5;
+        padding-top: 1em;
+        padding-bottom: 3em;
+    }
+    .abstand {
+        width: 0;
+    }
+    .nav .navbar-nav .left {
+        float: left;
+    }
+    nav .navbar-nav .right {
+        float: right;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 768px){
+    .contentline {
+        position: center;
+        margin-bottom: 3em;
+        list-style: none;
+        .line {
+            height: 2em;
+            padding-bottom: 0;
+        }
+        .lineheader {
+            h1 {
+                font-family: 'Brush Script MT', 'italic';
+                font-size: 4em;
+                //padding-bottom: 2em;
+                text-align: center;
+                color: #cfb02a;
+                text-shadow: -1px -2px #7e6b18;
+            }
+        }
+    }
+    .karusell {
+        width: 100%;
+        margin-top: 10em;
+        position: relative;
+        z-index: 2;
+    }
+    .app-box-body {
+        padding: 3% 15% 10%;
+    }
+    .section-front-page {
+        #zacken-rotate {
+            width: 100%;
+            height: 1em;
+            background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+            position: relative;
+            top: -12em;
+            z-index: 7
+        }   
+            #headericon {
+            width: 100%;
+            height: 10em;
+            margin-top: -18em;
+            background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
+            position: relative;
+            z-index: 8;
+            background-size: 25%;
+        }
+    }
+    #zacken-rotate {
+        width: 100%;
+        height: 1em;
+        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+        position: relative;
+        top: -1em;
+        z-index: 7;
+    }
+    .section-front-page .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
+    .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
+        position:relative;
+        z-index: 6;
+        top: -9em;
+        left: 25%;
+        background-size: 50%;
+    } 
+    .documentFirstHeading {
+        font-family: 'Brush Script MT', 'italic';
+        font-size: 5em;
+        color: #fff;
+        margin-top: -4em;
+        text-align:center;
+        position: relative;
+        z-index: 3;
+    }
+    .app-brandbar {
+        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        height: 18em;
+        position: relative;
+        z-index: 2;
+        margin-top: 10.3em;
+    }
+    #logobar {
+        margin-top: 5em;
+        position: relative;
+      }
+    .navbar-nav > li > a {
+        padding-bottom: 14px;
+        padding-left: 0.5em;
+        padding-top: 14px;
+    }
+    .app-navbar {
+        height: 6em;
+    }
+    #navigationbar {
+        position: relative;
+        //z-index: 5;
+        padding-top: 1em;
+        padding-bottom: 3em;
+    }
+    .abstand {
+        width: 0;
+    }
+    .nav .navbar-nav .left {
+        float: left;
+    }
+    nav .navbar-nav .right {
+        float: right;
+    }
+
+
+
+}
+@media only screen and (min-width: 981px) {
+    .contentline {
+        position: center;
+        margin-bottom: 3em;
+        list-style: none;
+        .line {
+            height: 2em;
+            padding-bottom: 4em;
+            background: url(../../img/line.png) 50% 100% no-repeat transparent;
+        }
+        .lineheader {
+            h1 {
+                font-family: 'Brush Script MT', 'italic';
+                font-size: 4em;
+                //padding-bottom: 2em;
+                text-align: center;
+                color: #cfb02a;
+                text-shadow: -1px -2px #7e6b18;
+            }
+        }
+    }
+    .app-box-body {
+        padding: 0;
+    }
+    .karusell {
+        width: 100%;
+        margin-top: -23em;
+        position: relative;
+        z-index: 2;
+    }
+    .nav .navbar-nav .left {
+        float: left;
+    }
+    nav .navbar-nav .right {
+        float: right;
+    }
+    .section-front-page .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/logobutton_big.png) 100% 0% no-repeat transparent;
+        position:relative;
+        top: -13em;
+    }   
+    .logo {
+        display: block;
+        width: 28em;
+        height: 18em;
+        background: url(../../img/contentlogo.png) 100% 0% no-repeat transparent;
+        position:relative;
+        top: -13em;
+    } 
+    .section-front-page #headericon {
+        width: 100%;
+        height: 10em;
+        margin-top: -10em;
+        background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
+        position: relative;
+        z-index: 8;
+    }
+    .documentFirstHeading {
+        font-family: 'Brush Script MT', 'italic';
+        font-size: 5em;
+        color: #fff;
+        margin-top: -4em;
+        text-align:center;
+        position: relative;
+        z-index: 3;
+        left: -35%;
+    }
+    .app-brandbar {
+        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        height: 18em;
+        position: relative;
+        z-index: 2;
+        margin-top: -22.6em;
+    }
+    #navigationbar {
+        padding-top: 3em;
+        padding-bottom: 13em;
+        position: relative;
+        //z-index: 5;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .karusell {
+        width: 1280px;
+        margin-top: -23em;
+        position: relative;
+        z-index: 2;
+    }
+    
+}
+//.logo {
+//    width: 24em;
+//    height: 18em;
+//}
+
+
+
 
 #facebook {
     background: url(../../img/fbbanner.png) 50% 50% no-repeat transparent;
     width: 50px;
     height: 100px;
-    margin-top: -106px;
+    //margin-top: -106px;
     float: right;
+    positon: relative;
+    top: 0;
+    float: right;
+    z-index: 3;
+}
+
+
+
+@media only screen and (max-width: 1280px) {}
+/**
+ * body
+ */
+
+body {
+    margin: 0;
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+
+.documentDescription {
+    font-size: 1.5em;
+    margin-top: 6em;
+}
+
+/* frontpage */
+
+
+.app-header {
+    margin-top: 4em;
+    .logobutton {
+        background: url(../../img/icon_beschreibungstext.png) 50% 50% no-repeat transparent;
+        height: 7em;
+        padding-top: 20%; 
+    }
+    p {
+        font-size: 1.9em;
+        text-transform: uppercase;
+    }
+    #fb {
+        padding: 0 20px 4px 20px;
+    }
+    .arrow {
+        padding: 10px 32px 5px 38px;
+        background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
+    }
+    a {
+        font-size: 0.6em;
+        color: #fff;
+    }
+}
+
+#service {
+    margin-top: 4em;
+    ul {
+        list-style: none;
+    }
+    .extra {
+        border-width: 0 4px 0 0;
+        border-style: solid;
+        -webkit-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+             -o-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+                border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
+    }
+    a {
+        font-size: 1.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #313337;
+    }
+    a:hover {
+        color: #629294;
+    }
+    h5 {
+        a {
+            color: #9d998c;
+        }
+        a:hover {
+            color: #629294;
+        }
+    }
+}
+
+.deco {
+    padding: 10px 55px 10px 55px;
+}
+
+
+#werkstatt {
+    margin-top: 5em;
+}
+
+#werkbody {
+    .logobuttonw {
+        background: url(../../img/toolbutton.png) 50% 50% no-repeat transparent;
+        height: 7em;
+        padding-top: 20%;
+    }
+    p {
+        font-size: 1.9em;
+        text-transform: uppercase;
+    }
+    .arrow {
+        padding: 10px 32px 5px 38px;
+        background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
+    }
+    a {
+        font-size: 0.6em;
+        color: #fff;
+    }
+}
+/**
+ * footer
+ */
+
+ .app-footer {
+    padding-top: 100px;
+    color: #fff;
+    background-color: #313337;
+ }
+
+ .app-footer a {
+    color: #fff;
+ }
+
+.app-footer img {
+    margin-right: 10px;
+}
+
+#footerlogo {
+    margin-bottom: -2.4em;
+}
+
+#footernav {
+    font-size: 1em;
+    max-width: 960px;
+    a {
+        font-size: 1em;
+        padding: 2px;
+        text-decoration: none;
+    }
+    a:hover {
+        padding: 2px;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+    }
+    ul {
+        max-width: 960px;
+        list-style: none;
+        li {
+            display: inline-block;
+            padding-left: 5px;
+        }
+    }
+}
+
+.part {
+    text-align: center
+}
+
+#footerline {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .dotline {
+        padding-top: 2%;
+        background: url(../../img/trennlinie_small.png) 50% 50% no-repeat transparent;
+    }
+    .tristar {
+        position: center;
+        height: 20px;
+        background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
+    }
+}
+
+.section-bestand {
+    .documentDescription {
+        font-size: 2em;
+        //margin-bottom: 15em;
+        //margin-top: 7em;
+    }
+    #parent-fieldname-text {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        h1 {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 1em;
+            text-shadow: 2px 3px #7e6b18;
+        }
+    }
+}
+
+.section-bestellung {
+    .documentDescription {
+        font-size: 2em;
+        //margin-bottom: 15em;
+        //margin-top: 7em;
+    }
+    #parent-fieldname-text {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        h1 {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 1em;
+            text-shadow: 2px 3px #7e6b18;
+        }
+    }
+}
+
+.section-kontakt {
+    .documentDescription {
+        font-size: 2em;
+        //margin-bottom: 15em;
+        //margin-top: 7em;
+    }
+    #parent-fieldname-text {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+        h1 {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 1em;
+            text-shadow: 2px 3px #7e6b18;
+        }
+    }
+}
+.section-werkstatt {
+    #headericon {
+        margin-top: 2em;
+    }
+    .documentDescription {
+        font-size: 2em;
+        margin-bottom: 15em;
+        margin-top: 7em;
+    }
+        #content-core {
+            font-size: 1.5em;
+            margin-bottom: -8em;
+            h1 {
+                font-size: 2em;
+                font-weight: bolder;
+                margin-bottom: 1em;
+                text-shadow: 2px 3px #7e6b18;
+            }
+        }
+    .pictures {
+        position: relative;
+        top: -62em;
+        .pic1 {
+            background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic2 {
+            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic3 {
+            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }        
+    }
+}
+
+.section-idee {
+    #headericon {
+        margin-top: 2em;
+    }
+    .documentDescription {
+        font-size: 2em;
+        margin-bottom: 15em;
+        margin-top: 7em;
+    }
+        #content-core {
+            font-size: 1.5em;
+            margin-bottom: -2em;
+            h1 {
+                font-size: 2em;
+                font-weight: bolder;
+                margin-bottom: 1em;
+                text-shadow: 2px 3px #7e6b18;
+            }
+        }
+    .pictures {
+        position: relative;
+        top: -110em;
+        .pic1 {
+            background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic2 {
+            background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic3 {
+            background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }        
+    }
+}
+
+.section-special-cars {
+    #headericon {
+        margin-top: 2em;
+    }
+    .documentFirstHeading {
+        top: -1em;
+        font-size: 4em;
+    }
+    .documentDescription {
+        font-size: 2em;
+        margin-bottom: 16em;
+    }
+    #content-core {
+        font-size: 1.5em;
+        margin-bottom: -8em;
+        h1 {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 1em;
+            text-shadow: 2px 3px #7e6b18;
+        }
+    }
+    .pictures {
+        position: relative;
+        top: -57em;
+        .pic1 {
+            background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic2 {
+            background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }
+        .pic3 {
+            background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+        }        
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px){
+    .section-werkstatt {
+    #headericon {
+        margin-top: 2em;
+    }
+    .documentFirstHeading {
+        top: -2em;
+        font-size: 4em;
+    }
+    .documentDescription {
+        font-size: 2em;
+        margin-bottom: 10em;
+        margin-top: 4em;
+    }
+    #content-core {
+        font-size: 1.5em;
+        margin-bottom: -10em;
+        h1 {
+            font-size: 2em;
+            font-weight: bolder;
+            margin-bottom: 1em;
+            text-shadow: 2px 3px #7e6b18;
+        }
+    }
+    .pictures {
+        position: relative;
+        top: -77em;
+        .pic1 {
+            background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+            background-size: 90%;
+        }
+        .pic2 {
+            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+            background-size: 90%;
+        }
+        .pic3 {
+            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            width: 33%;
+            height: 18em;
+            background-size: 90%;
+        }        
+    }
+}
+    .section-idee {
+        .documentFirstHeading {
+            top: -2em;
+        }
+        .documentDescription {
+            margin-top: 2em;
+            margin-bottom: 11em;
+        }
+        #content-core {
+            font-size: 1.5em;
+            margin-bottom: -11em;
+            h1 {
+                font-size: 2em;
+                font-weight: bolder;
+                margin-bottom: 1em;
+                text-shadow: 2px 3px #7e6b18;
+            }
+        }
+        .pictures {
+            position: relative;
+            top: -124em;
+            .pic1 {
+                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }
+            .pic2 {
+                background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }
+            .pic3 {
+                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }        
+        }
+    }
+    .section-special-cars {
+        #headericon {
+            margin-top: 2em;
+        }
+        .documentFirstHeading {
+            top: -2em;
+            font-size: 4em;
+        }
+        .documentDescription {
+            font-size: 2em;
+            margin-bottom: 11em;
+            margin-top: 3em;
+        }
+        #content-core {
+            font-size: 1.5em;
+            margin-bottom: -11em;
+            h1 {
+                font-size: 2em;
+                font-weight: bolder;
+                margin-bottom: 1em;
+                text-shadow: 2px 3px #7e6b18;
+            }
+        }
+    .pictures {
+        position: relative;
+        top: -67em;
+            .pic1 {
+                background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }
+            .pic2 {
+                background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }
+            .pic3 {
+                background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+                width: 33%;
+                height: 18em;
+                background-size: 90%;
+            }        
+        }
+    }
+}
+@media only screen and (max-width: 381px) {
+    .section-werkstatt {
+        .documentDescription {
+            margin-bottom: 2em;
+            margin-top: 8em;
+        }
+        #content-core {
+            margin-bottom: 0;
+        }
+        .pictures {
+            position: relative;
+            top: 0em;
+        .pic1 {
+            //background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+        }
+        .pic2 {
+            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+        }
+        .pic3 {
+            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+        }        
+    }
+}
+    .section-idee {
+        .documentDescription {
+            margin-bottom: 2em;
+            margin-top: 8em;
+        }
+        #content-core {
+            margin-bottom: 0;
+        }
+        .pictures {
+            position: relative;
+            top: 0em;
+            .pic1 {
+                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }
+            .pic2 {
+                background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }
+            .pic3 {
+                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }        
+        }
+    }
+    .section-special-cars {
+        #headericon {
+            margin-top: 2em;
+        }
+        .documentFirstHeading {
+            top: -1em;
+            font-size: 4em;
+        }
+        .documentDescription {
+            margin-bottom: 3em;
+            margin-top: 6em;
+        }
+        #content-core {
+            margin-bottom: 0;
+        }
+        .pictures {
+            position: relative;
+            top: 0em;
+            .pic1 {
+                background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }
+            .pic2 {
+                background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }
+            .pic3 {
+                background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+            width: 0;
+            height: 0;
+            background-size: 0;
+            }        
+        }
+    }
 }

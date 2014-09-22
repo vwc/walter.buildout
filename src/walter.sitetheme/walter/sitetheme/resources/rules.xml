@@ -20,7 +20,9 @@
 
     <theme href="dist/frontpage.html" css:if-content="body.section-front-page" />
 
-
+    <theme href="dist/altertheme.html" css:if-content="body.section-idee" />
+    <theme href="dist/altertheme.html" css:if-content="body.section-werkstatt" />
+    <theme href="dist/altertheme.html" css:if-content="body.section-special-cars" />
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
 
