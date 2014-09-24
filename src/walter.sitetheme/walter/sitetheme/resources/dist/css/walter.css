@@ -16014,18 +16014,22 @@ body
 {
     margin-top: 2em;
 }
+.section-werkstatt .documentFirstHeading
+{
+    margin-top: -7.5em;
+}
 .section-werkstatt .documentDescription
 {
     font-size: 2em;
 
-    margin-top: 7em;
-    margin-bottom: 15em;
+    position: relative;
+    top: -7em;
+
+    margin-bottom: 7em;
 }
 .section-werkstatt #content-core
 {
     font-size: 1.5em;
-
-    margin-bottom: -8em;
 }
 .section-werkstatt #content-core h1
 {
@@ -16039,7 +16043,7 @@ body
 .section-werkstatt .pictures
 {
     position: relative;
-    top: -62em;
+    top: 16em;
 }
 .section-werkstatt .pictures .pic1
 {
@@ -16066,18 +16070,22 @@ body
 {
     margin-top: 2em;
 }
+.section-idee .documentFirstHeading
+{
+    margin-top: -7.5em;
+}
 .section-idee .documentDescription
 {
     font-size: 2em;
 
-    margin-top: 7em;
-    margin-bottom: 15em;
+    position: relative;
+    top: -7em;
+
+    margin-bottom: 7em;
 }
 .section-idee #content-core
 {
     font-size: 1.5em;
-
-    margin-bottom: -2em;
 }
 .section-idee #content-core h1
 {
@@ -16091,7 +16099,7 @@ body
 .section-idee .pictures
 {
     position: relative;
-    top: -110em;
+    top: 16em;
 }
 .section-idee .pictures .pic1
 {
@@ -16123,18 +16131,21 @@ body
     font-size: 4em;
 
     top: -1em;
+
+    margin-top: -8em;
 }
 .section-special-cars .documentDescription
 {
     font-size: 2em;
 
-    margin-bottom: 16em;
+    position: relative;
+    top: -7em;
+
+    margin-bottom: 5em;
 }
 .section-special-cars #content-core
 {
     font-size: 1.5em;
-
-    margin-bottom: -8em;
 }
 .section-special-cars #content-core h1
 {
@@ -16148,7 +16159,7 @@ body
 .section-special-cars .pictures
 {
     position: relative;
-    top: -57em;
+    top: 16em;
 }
 .section-special-cars .pictures .pic1
 {
@@ -16187,14 +16198,14 @@ body
     {
         font-size: 2em;
 
-        margin-top: 4em;
-        margin-bottom: 10em;
+        position: relative;
+        top: -8em;
+
+        margin-bottom: 5em;
     }
     .section-werkstatt #content-core
     {
         font-size: 1.5em;
-
-        margin-bottom: -10em;
     }
     .section-werkstatt #content-core h1
     {
@@ -16208,7 +16219,7 @@ body
     .section-werkstatt .pictures
     {
         position: relative;
-        top: -77em;
+        top: 20em;
     }
     .section-werkstatt .pictures .pic1
     {
@@ -16240,14 +16251,15 @@ body
     }
     .section-idee .documentDescription
     {
+        position: relative;
+        top: -8em;
+
         margin-top: 2em;
-        margin-bottom: 11em;
+        margin-bottom: 5em;
     }
     .section-idee #content-core
     {
         font-size: 1.5em;
-
-        margin-bottom: -11em;
     }
     .section-idee #content-core h1
     {
@@ -16261,7 +16273,7 @@ body
     .section-idee .pictures
     {
         position: relative;
-        top: -124em;
+        top: 20em;
     }
     .section-idee .pictures .pic1
     {
@@ -16301,14 +16313,14 @@ body
     {
         font-size: 2em;
 
-        margin-top: 3em;
-        margin-bottom: 11em;
+        position: relative;
+        top: -8em;
+
+        margin-bottom: 5em;
     }
     .section-special-cars #content-core
     {
         font-size: 1.5em;
-
-        margin-bottom: -11em;
     }
     .section-special-cars #content-core h1
     {
@@ -16322,7 +16334,7 @@ body
     .section-special-cars .pictures
     {
         position: relative;
-        top: -67em;
+        top: 20em;
     }
     .section-special-cars .pictures .pic1
     {
@@ -16351,9 +16363,20 @@ body
 }
 @media only screen and (max-width: 381px)
 {
+    .section-werkstatt .documentFirstHeading
+    {
+        font-size: 4em;
+
+        top: -5em;
+
+        margin-top: 0;
+    }
     .section-werkstatt .documentDescription
     {
-        margin-top: 8em;
+        position: relative;
+        top: 0;
+
+        margin-top: -3em;
         margin-bottom: 2em;
     }
     .section-werkstatt #content-core
@@ -16388,9 +16411,20 @@ body
         background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
         background-size: 0;
     }
+    .section-idee .documentFirstHeading
+    {
+        font-size: 4em;
+
+        top: -5em;
+
+        margin-top: 0;
+    }
     .section-idee .documentDescription
     {
-        margin-top: 8em;
+        position: relative;
+        top: 0;
+
+        margin-top: -3em;
         margin-bottom: 2em;
     }
     .section-idee #content-core
@@ -16434,11 +16468,16 @@ body
     {
         font-size: 4em;
 
-        top: -1em;
+        top: -5em;
+
+        margin-top: 0;
     }
     .section-special-cars .documentDescription
     {
-        margin-top: 6em;
+        position: relative;
+        top: 0;
+
+        margin-top: -3em;
         margin-bottom: 3em;
     }
     .section-special-cars #content-core
