@@ -8,6 +8,21 @@
 
 /* navbar */
 
+.section-kontakt {
+    h2 {
+        font-weight: bolder;
+    }
+
+    h3 {
+        font-weight: bolder;
+    }  
+}
+
+.app-box-body {
+            p {
+            font-size: 1.2em;
+        }
+}
 .navbar-inverse .navbar-toggle ul {
     margin-top: 100px;
 }
@@ -63,6 +78,35 @@
 
 }
 
+.section-kontakt {
+    #headericon {
+        width: 100%;
+        height: 5em;
+        margin-top: 2em;
+        background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+
+    }    
+}
+
+.section-bestellung {
+    #headericon {
+        width: 100%;
+        height: 5em;
+        margin-top: 2em;
+        background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+
+    }    
+}
+
+.section-bestand {
+    #headericon {
+        width: 100%;
+        height: 5em;
+        margin-top: 2em;
+        background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+
+    }    
+}
 @media only screen and (max-width: 380px) {
     .contentline {
         position: center;
@@ -126,7 +170,7 @@
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
         color: #fff;
-        margin-top: -4em;
+        top: -4em;
         text-align:center;
         position: relative;
         z-index: 3;
@@ -267,7 +311,7 @@
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
         color: #fff;
-        margin-top: -4em;
+        top: -4em;
         text-align:center;
         position: relative;
         z-index: 3;
@@ -393,7 +437,7 @@
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
         color: #fff;
-        margin-top: -4em;
+        top: -4em;
         text-align:center;
         position: relative;
         z-index: 3;
@@ -500,11 +544,12 @@
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
         color: #fff;
-        margin-top: -4em;
+        //margin-top: -4em;
+        top: -4em;
         text-align:center;
         position: relative;
         z-index: 3;
-        left: -35%;
+       // left: -35%;
     }
     .app-brandbar {
         background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
@@ -717,13 +762,20 @@ body {
 }
 
 .section-bestand {
+                a {
+                color: #cfb02a;
+            }
+            a:hover {
+                text-decoration: none;
+                color:#313337;
+            }
     .documentDescription {
         font-size: 2em;
-        //margin-bottom: 15em;
-        //margin-top: 7em;
+        margin-bottom: 2em;
+        margin-top: -4em;
     }
-    #parent-fieldname-text {
-        font-size: 1.5em;
+    #content-core {
+        font-size: 1.5em;            
         margin-bottom: 2em;
         h1 {
             font-size: 2em;
@@ -735,12 +787,19 @@ body {
 }
 
 .section-bestellung {
+                a {
+                color: #cfb02a;
+            }
+            a:hover {
+                text-decoration: none;
+                color:#313337;
+            }
     .documentDescription {
         font-size: 2em;
-        //margin-bottom: 15em;
-        //margin-top: 7em;
+        margin-bottom: 2em;
+        margin-top: -4em;
     }
-    #parent-fieldname-text {
+    #content-core {
         font-size: 1.5em;
         margin-bottom: 2em;
         h1 {
@@ -748,18 +807,32 @@ body {
             font-weight: bolder;
             margin-bottom: 1em;
             text-shadow: 2px 3px #7e6b18;
+
+        }
+        hr {
+            color: #313337;
         }
     }
 }
 
 .section-kontakt {
+                a {
+                color: #cfb02a;
+            }
+            a:hover {
+                text-decoration: none;
+                color:#313337;
+            }
     .documentDescription {
         font-size: 2em;
         //margin-bottom: 15em;
-        //margin-top: 7em;
+        margin-top: -4em;
     }
-    #parent-fieldname-text {
-        font-size: 1.5em;
+    #content-core {
+
+        font-size: 1.5em;            
+
+
         margin-bottom: 2em;
         h1 {
             font-size: 2em;
@@ -907,7 +980,7 @@ body {
         margin-top: 2em;
     }
     .documentFirstHeading {
-        top: -2em;
+        top: -4em;
         font-size: 4em;
     }
     .documentDescription {

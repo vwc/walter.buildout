@@ -4063,10 +4063,12 @@ input[type='button'].btn-block
 .collapse
 {
     display: none;
+    visibility: hidden;
 }
 .collapse.in
 {
     display: block;
+    visibility: visible;
 }
 tr.collapse.in
 {
@@ -4084,9 +4086,12 @@ tbody.collapse.in
 
     height: 0;
 
-    -webkit-transition: height .35s ease;
-         -o-transition: height .35s ease;
-            transition: height .35s ease;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: .35s;
+            transition-duration: .35s;
+    -webkit-transition-property: height, visibility;
+            transition-property: height, visibility;
 }
 .caret
 {
@@ -4977,10 +4982,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 .tab-content > .tab-pane
 {
     display: none;
+    visibility: hidden;
 }
 .tab-content > .active
 {
     display: block;
+    visibility: visible;
 }
 .nav-tabs .dropdown-menu
 {
@@ -5040,6 +5047,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     .navbar-collapse.collapse
     {
         display: block !important;
+        visibility: visible !important;
         overflow: visible !important;
 
         height: auto !important;
@@ -5109,9 +5117,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn
     z-index: 1030;
     right: 0;
     left: 0;
-
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
 }
 @media (min-width: 768px)
 {
@@ -15074,6 +15079,18 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  * header
  */
 /* navbar */
+.section-kontakt h2
+{
+    font-weight: bolder;
+}
+.section-kontakt h3
+{
+    font-weight: bolder;
+}
+.app-box-body p
+{
+    font-size: 1.2em;
+}
 .navbar-inverse .navbar-toggle ul
 {
     margin-top: 100px;
@@ -15131,6 +15148,30 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     width: 100%;
     height: 5em;
     margin-top: 1em;
+
+    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+}
+.section-kontakt #headericon
+{
+    width: 100%;
+    height: 5em;
+    margin-top: 2em;
+
+    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+}
+.section-bestellung #headericon
+{
+    width: 100%;
+    height: 5em;
+    margin-top: 2em;
+
+    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+}
+.section-bestand #headericon
+{
+    width: 100%;
+    height: 5em;
+    margin-top: 2em;
 
     background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 }
@@ -15216,8 +15257,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         position: relative;
         z-index: 3;
-
-        margin-top: -4em;
+        top: -4em;
 
         text-align: center;
 
@@ -15402,8 +15442,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         position: relative;
         z-index: 3;
-
-        margin-top: -4em;
+        top: -4em;
 
         text-align: center;
 
@@ -15563,8 +15602,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         position: relative;
         z-index: 3;
-
-        margin-top: -4em;
+        top: -4em;
 
         text-align: center;
 
@@ -15705,9 +15743,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         position: relative;
         z-index: 3;
-        left: -35%;
-
-        margin-top: -4em;
+        top: -4em;
 
         text-align: center;
 
@@ -15953,17 +15989,30 @@ body
 
     background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
 }
+.section-bestand a
+{
+    color: #cfb02a;
+}
+.section-bestand a:hover
+{
+    text-decoration: none;
+
+    color: #313337;
+}
 .section-bestand .documentDescription
 {
     font-size: 2em;
+
+    margin-top: -4em;
+    margin-bottom: 2em;
 }
-.section-bestand #parent-fieldname-text
+.section-bestand #content-core
 {
     font-size: 1.5em;
 
     margin-bottom: 2em;
 }
-.section-bestand #parent-fieldname-text h1
+.section-bestand #content-core h1
 {
     font-size: 2em;
     font-weight: bolder;
@@ -15971,18 +16020,31 @@ body
     margin-bottom: 1em;
 
     text-shadow: 2px 3px #7e6b18;
+}
+.section-bestellung a
+{
+    color: #cfb02a;
+}
+.section-bestellung a:hover
+{
+    text-decoration: none;
+
+    color: #313337;
 }
 .section-bestellung .documentDescription
 {
     font-size: 2em;
+
+    margin-top: -4em;
+    margin-bottom: 2em;
 }
-.section-bestellung #parent-fieldname-text
+.section-bestellung #content-core
 {
     font-size: 1.5em;
 
     margin-bottom: 2em;
 }
-.section-bestellung #parent-fieldname-text h1
+.section-bestellung #content-core h1
 {
     font-size: 2em;
     font-weight: bolder;
@@ -15991,17 +16053,33 @@ body
 
     text-shadow: 2px 3px #7e6b18;
 }
+.section-bestellung #content-core hr
+{
+    color: #313337;
+}
+.section-kontakt a
+{
+    color: #cfb02a;
+}
+.section-kontakt a:hover
+{
+    text-decoration: none;
+
+    color: #313337;
+}
 .section-kontakt .documentDescription
 {
     font-size: 2em;
+
+    margin-top: -4em;
 }
-.section-kontakt #parent-fieldname-text
+.section-kontakt #content-core
 {
     font-size: 1.5em;
 
     margin-bottom: 2em;
 }
-.section-kontakt #parent-fieldname-text h1
+.section-kontakt #content-core h1
 {
     font-size: 2em;
     font-weight: bolder;
@@ -16192,7 +16270,7 @@ body
     {
         font-size: 4em;
 
-        top: -2em;
+        top: -4em;
     }
     .section-werkstatt .documentDescription
     {
