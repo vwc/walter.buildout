@@ -4,7 +4,6 @@
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--><!--<![endif]-->
 
-
 <html lang="en">
   <head>
   <!-- Meta, title, CSS, favicons, etc. -->
@@ -19,74 +18,78 @@
   </title>
 
   <!-- Bootstrap core CSS -->
-  <link href="dist/css/walter.css" rel="stylesheet">
+  <link href="dist/css/walter.min.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="http://localhost:9001bower_components/html5shiv/html5shiv.js"></script>
     <script src="../bower_components/respond/respond.min.js"></script>
   <![endif]-->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="dist/js/bootstrap.min.js"></script>
   <!-- Favicons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">
-  <script src="http://localhost:8499/livereload.js"></script>
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">   
   </head>
 
   <body>
     <a class="sr-only" href="#content">Skip navigation</a>
     <div class="navbar navbar-default navbar-fixed-top app-toolbar" id="app-toolbar">
       <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".app-toolbar-collapse">
+        <button type="button" class="navbar-toogle" data-toggle="collapse" data-target=".app-toolbar-collapse">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">My Carman</a>
+        </button>
+        <a class="navbar-brand" href="/">My Carman</a>
       </div>
       <div class="navbar-collapse collapse app-toolbar-collapse">
-          <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Contents</a></li>
-              <li><a href="#about">View</a></li>
-              <li><a href="#contact">Edit</a></li>
-              <li><a href="#contact">Share</a></li>
-              <li><a href="#contact">Content rules</a></li>
-          </ul>
-          <ul class="nav navbar-nav pull-right">
-            <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
-              <a data-toggle="dropdown" class="dropdown-toggle" href="/author/123456789">
-                <span>John Doe</span>
-                <b class="caret">
-              </b></a>
-              <ul class="dropdown-menu"><li id="plone-personal-actions-dashboard">
-                  <a href="/dashboard">My workspace</a>
-                </li>
-                <li id="plone-personal-actions-preferences">
-                  <a href="/preferences">Settings</a>
-                </li>
-                <li id="plone-personal-actions-plone_setup">
-                  <a href="/controlpanel">Configuration</a>
-                </li>
-                <li id="plone-personal-actions-logout">
-                  <a href="/logout">Signout</a>
-                </li>
-              </ul></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Add <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Folder</a></li>
-                  <li><a href="#">Document</a></li>
-                  <li><a href="#">Image</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Settings</li>
-                  <li><a href="#">Filter options</a></li>
-                  <li><a href="#">Add...</a></li>
-                </ul>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Contents</a></li>
+                <li><a href="#about">View</a></li>
+                <li><a href="#contact">Edit</a></li>
+                <li><a href="#contact">Share</a></li>
+                <li><a href="#contact">Content rules</a></li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li id="plone-personal-actions" class="dropdown dropdown-userinfo">
+            <a data-toggle="dropdown" class="dropdown-toogle" href="/author/123456789">
+              <span>John Doe</span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li id="plone-personal-actions-dashboard">
+                <a href="/dashboard">My workspace</a>
               </li>
-          </ul>
-       </div><!--/.nav-collapse -->
-  </div>
+              <li id="plone-personal-actions-preferences">
+                <a href="/preferences">Settings</a>
+              </li>
+              <li id="plone-personal-actions-plone_setup">
+                <a href="/controlpanel">Configuration</a>
+              </li>
+              <li id="plone-personal-actions-logout">
+                <a href="/logout">Signout</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Add <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                      <li><a href="#">Folder</a></li>
+                      <li><a href="#">Document</a></li>
+                      <li><a href="#">Image</a></li>
+                      <li class="divider"></li>
+                      <li class="dropdown-header">Settings</li>
+                      <li><a href="#">Filter options</a></li>
+                      <li><a href="#">Add...</a></li> 
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- App master nav -->
     <nav class="navbar navbar-default app-navbar" id="app-navbar" role="navigation">
       <!-- Brand and toggle get grounded for better mobile display -->
@@ -116,7 +119,7 @@
           <div class="row" id="navigationbar">
             <div class="col-xs-6 col-md-4">
               <ul class="nav navbar-nav left">
-                <li><a href="idee" id="idee">IDEE</a></li>
+                <li><a href="/idee" id="idee">IDEE</a></li>
                 <li>
                 <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
                 </li>
@@ -144,11 +147,11 @@
           </div>
 
           <div class="row" id="logobar">
-            <div class="col-xs-12 col-md-3"></div>
-            <div class="col-xs-12 col-md-6">
+            <div class="col-xs-12 col-md-4"></div>
+            <div class="col-xs-12 col-md-4">
               <a class="logo" href="/"></a>
             </div>
-            <div class="col-xs-12 col-md-3"></div>
+            <div class="col-xs-12 col-md-4"></div>
           </div>
         </div>
       </div>
@@ -162,13 +165,14 @@
     <div class="container" id="headericon">
 
     </div>
-        <div class="container pictures">
+      <!--<div class="container pictures">
       <div class="row">
         <div class="col-xs-12 col-md-4 pic1"></div>
         <div class="col-xs-12 col-md-4 pic2"></div>
         <div class="col-xs-12 col-md-4 pic3"></div>
       </div>
-    </div>
+    </div> -->
+
     <div class="app-header">
       <div class="container">
 
@@ -209,8 +213,8 @@
                   <div class="row" id="service">
                 <div class="col-xs-12 col-md-4">
                     <ul class="extra">
-                      <li><h5><a href="/werkstatt#werkstatt">WERKSTATT</a></h5></li>
                       <li><a href="/werkstatt#Inspektion">INSPEKTION - REPARATUR</a></li>
+                      <li><a href="/werkstatt#diagnose">DIAGNOSE</a></li>
                       <li><a href="/werkstatt#karosserie">KAROSSERIE - LACK</a></li>
                       <li><a href="/werkstatt#huau">HU - AU</a></li>
                       <li><a href="/werkstatt#klimaservice">KLIMASERVICE</a></li>
@@ -221,7 +225,6 @@
 
                 <div class="col-xs-12 col-md-4">
                     <ul class="extra">
-                      <li><h5><a href="/werkstatt#schadensservice">SCHADENSSERVICE</a></h5></li>
                       <li><a href="/werkstatt#autoglas">AUTOGLAS-ZENTRUM</a></li>
                       <li><a href="/werkstatt#unfallschadenabwicklung">UNFALLSCHADEN-<br>ABWICKLUNG</a></li>
                       <li><a href="/werkstatt#unfallinstandsetzung">UNFALLINSTANDSETZUNG</a></li>
@@ -231,11 +234,11 @@
                 </div>
                 <div class="col-xs-12 col-md-4">
                     <ul>
-                      <li><h5><a href="/werkstatt#finanzierung">FINANZIERUNG</a></h5></li>
-                      <li><a href="/werkstatt#neuwagenfinanzierung">NEUWAGENFINANZIERUNG</a></li>
-                      <li><a href="/werkstatt#gebrauchtwagenfinanzierung">GEBRAUCHTWAGEN-<br>FINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#finanzierung">NEUWAGENFINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#finanzierung">GEBRAUCHTWAGEN-<br>FINANZIERUNG</a></li>
                       <li><a href="/werkstatt#leasing">LEASING</a></li>
-                      <li><a href="/werkstatt#reperaturfinanzierung">REPERATURFINANZIERUNG</a></li>
+                      <li><a href="/werkstatt#tuning">TUNING</a></li>
+                      <li><a href="/werkstatt#finanzierung">REPERATURFINANZIERUNG</a></li>
                       <li><a href="/werkstatt#garantie">GARANTIE</a></li>
                     </ul>
                 </div>

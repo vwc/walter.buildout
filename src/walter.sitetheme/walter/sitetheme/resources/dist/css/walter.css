@@ -15095,6 +15095,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     margin-top: 100px;
 }
+.navbar-collapse
+{
+    position: relative;
+    z-index: 12;
+
+    width: 100%;
+}
 #logobar
 {
     position: relative;
@@ -15177,6 +15184,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 @media only screen and (max-width: 380px)
 {
+    .app-header
+    {
+        margin-top: 0;
+    }
     .contentline
     {
         position: center;
@@ -15206,7 +15217,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         z-index: 2;
 
         width: 100%;
-        margin-top: 10em;
+        margin-top: 4em;
+        margin-bottom: -2em;
+    }
+    .karusell a.left.carousel-control span img
+    {
+        height: 2em;
+    }
+    .karusell a.right.carousel-control span img
+    {
+        height: 2em;
     }
     .app-box-body
     {
@@ -15294,6 +15314,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         position: relative;
         z-index: 5;
 
+        min-width: 360px;
+        margin: -2em 0 -2em -2em;
         padding-top: 1em;
         padding-bottom: 3em;
 
@@ -15312,7 +15334,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         display: hidden;
 
-        width: 28em;
         height: 18em;
 
         background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
@@ -15327,7 +15348,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         display: hidden;
 
-        width: 28em;
         height: 18em;
 
         background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
@@ -15389,7 +15409,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         width: 100%;
         height: 10em;
-        margin-top: -16em;
+        margin-top: -14.5em;
 
         background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
         background-size: 25%;
@@ -15409,31 +15429,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     {
         position: relative;
         z-index: 6;
-        top: -9em;
-        left: 25%;
+        top: -7em;
+        left: 30%;
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
-        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
+        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
+        background-size: 40%;
     }
     .logo
     {
         position: relative;
         z-index: 6;
         top: -9em;
-        left: 25%;
+        left: 30%;
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
-        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
+        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
+        background-size: 40%;
     }
     .documentFirstHeading
     {
@@ -15569,31 +15587,29 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     {
         position: relative;
         z-index: 6;
-        top: -9em;
-        left: 25%;
+        top: -7em;
+        left: 30%;
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
-        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
+        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
+        background-size: 40%;
     }
     .logo
     {
         position: relative;
         z-index: 6;
         top: -9em;
-        left: 25%;
+        left: 30%;
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
-        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
+        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
+        background-size: 40%;
     }
     .documentFirstHeading
     {
@@ -15708,7 +15724,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
         background: url(../../img/logobutton_big.png) 100% 0 no-repeat transparent;
@@ -15720,10 +15735,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         display: block;
 
-        width: 28em;
         height: 18em;
 
-        background: url(../../img/contentlogo.png) 100% 0 no-repeat transparent;
+        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
     }
     .section-front-page #headericon
     {
@@ -15970,6 +15984,18 @@ body
 {
     text-align: center;
 }
+@media only screen and (max-width: 980px)
+{
+    .part
+    {
+        margin-bottom: 1em;
+    }
+    #service .extra
+    {
+        border-style: none;
+        border-image: none;
+    }
+}
 #footerline
 {
     padding-top: 30px;
@@ -16055,7 +16081,7 @@ body
 }
 .section-bestellung #content-core hr
 {
-    color: #313337;
+    border: 1px solid #313337;
 }
 .section-kontakt a
 {
@@ -16094,16 +16120,13 @@ body
 }
 .section-werkstatt .documentFirstHeading
 {
-    margin-top: -7.5em;
+    margin-top: 0;
 }
 .section-werkstatt .documentDescription
 {
     font-size: 2em;
 
-    position: relative;
-    top: -7em;
-
-    margin-bottom: 7em;
+    margin-top: -3em;
 }
 .section-werkstatt #content-core
 {
@@ -16118,31 +16141,26 @@ body
 
     text-shadow: 2px 3px #7e6b18;
 }
-.section-werkstatt .pictures
-{
-    position: relative;
-    top: 16em;
-}
 .section-werkstatt .pictures .pic1
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+    background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
 }
 .section-werkstatt .pictures .pic2
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+    background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
 }
 .section-werkstatt .pictures .pic3
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+    background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
 }
 .section-idee #headericon
 {
@@ -16150,16 +16168,16 @@ body
 }
 .section-idee .documentFirstHeading
 {
-    margin-top: -7.5em;
+    top: 0;
+    left: -38%;
+
+    margin-top: -4em;
 }
 .section-idee .documentDescription
 {
     font-size: 2em;
 
-    position: relative;
-    top: -7em;
-
-    margin-bottom: 7em;
+    margin-top: 7em;
 }
 .section-idee #content-core
 {
@@ -16174,31 +16192,26 @@ body
 
     text-shadow: 2px 3px #7e6b18;
 }
-.section-idee .pictures
-{
-    position: relative;
-    top: 16em;
-}
 .section-idee .pictures .pic1
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+    background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
 }
 .section-idee .pictures .pic2
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+    background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
 }
 .section-idee .pictures .pic3
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+    background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
 }
 .section-special-cars #headericon
 {
@@ -16209,17 +16222,15 @@ body
     font-size: 4em;
 
     top: -1em;
+    left: -38%;
 
-    margin-top: -8em;
+    margin-top: -4em;
 }
 .section-special-cars .documentDescription
 {
     font-size: 2em;
 
-    position: relative;
-    top: -7em;
-
-    margin-bottom: 5em;
+    margin-top: 6em;
 }
 .section-special-cars #content-core
 {
@@ -16234,31 +16245,26 @@ body
 
     text-shadow: 2px 3px #7e6b18;
 }
-.section-special-cars .pictures
-{
-    position: relative;
-    top: 16em;
-}
 .section-special-cars .pictures .pic1
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+    background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
 }
 .section-special-cars .pictures .pic2
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+    background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
 }
 .section-special-cars .pictures .pic3
 {
     width: 33%;
     height: 18em;
 
-    background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+    background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
 }
 @media only screen and (min-width: 768px) and (max-width: 980px)
 {
@@ -16270,16 +16276,16 @@ body
     {
         font-size: 4em;
 
-        top: -4em;
+        top: -4.5em;
     }
     .section-werkstatt .documentDescription
     {
         font-size: 2em;
 
         position: relative;
-        top: -8em;
+        top: 0;
 
-        margin-bottom: 5em;
+        margin-bottom: 2em;
     }
     .section-werkstatt #content-core
     {
@@ -16294,46 +16300,41 @@ body
 
         text-shadow: 2px 3px #7e6b18;
     }
-    .section-werkstatt .pictures
-    {
-        position: relative;
-        top: 20em;
-    }
     .section-werkstatt .pictures .pic1
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+        background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-werkstatt .pictures .pic2
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+        background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-werkstatt .pictures .pic3
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+        background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-idee .documentFirstHeading
     {
-        top: -2em;
+        top: -4em;
+        left: 0;
+
+        margin-top: 0;
     }
     .section-idee .documentDescription
     {
-        position: relative;
-        top: -8em;
-
-        margin-top: 2em;
-        margin-bottom: 5em;
+        margin-top: -3em;
+        margin-bottom: 2em;
     }
     .section-idee #content-core
     {
@@ -16348,33 +16349,28 @@ body
 
         text-shadow: 2px 3px #7e6b18;
     }
-    .section-idee .pictures
-    {
-        position: relative;
-        top: 20em;
-    }
     .section-idee .pictures .pic1
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-idee .pictures .pic2
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-idee .pictures .pic3
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-special-cars #headericon
@@ -16386,15 +16382,14 @@ body
         font-size: 4em;
 
         top: -2em;
+        left: 0;
     }
     .section-special-cars .documentDescription
     {
         font-size: 2em;
 
         position: relative;
-        top: -8em;
-
-        margin-bottom: 5em;
+        top: -2em;
     }
     .section-special-cars #content-core
     {
@@ -16409,33 +16404,28 @@ body
 
         text-shadow: 2px 3px #7e6b18;
     }
-    .section-special-cars .pictures
-    {
-        position: relative;
-        top: 20em;
-    }
     .section-special-cars .pictures .pic1
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-special-cars .pictures .pic2
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
     .section-special-cars .pictures .pic3
     {
         width: 33%;
-        height: 18em;
+        height: 10em;
 
-        background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
         background-size: 90%;
     }
 }
@@ -16461,6 +16451,10 @@ body
     {
         margin-bottom: 0;
     }
+    .section-werkstatt #content-core h1
+    {
+        font-size: 1.7em;
+    }
     .section-werkstatt .pictures
     {
         position: relative;
@@ -16478,7 +16472,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+        background: url(../../img/werkstatt_pic2.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-werkstatt .pictures .pic3
@@ -16486,7 +16480,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+        background: url(../../img/werkstatt_pic3.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-idee .documentFirstHeading
@@ -16494,6 +16488,7 @@ body
         font-size: 4em;
 
         top: -5em;
+        left: 0;
 
         margin-top: 0;
     }
@@ -16509,17 +16504,21 @@ body
     {
         margin-bottom: 0;
     }
+    .section-idee #content-core h1
+    {
+        font-size: 1.7em;
+    }
     .section-idee .pictures
     {
-        position: relative;
-        top: 0;
+        width: 100%;
+        height: 0;
     }
     .section-idee .pictures .pic1
     {
         width: 0;
         height: 0;
 
-        background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-idee .pictures .pic2
@@ -16527,7 +16526,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee2.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-idee .pictures .pic3
@@ -16535,7 +16534,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+        background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-special-cars #headericon
@@ -16544,9 +16543,10 @@ body
     }
     .section-special-cars .documentFirstHeading
     {
-        font-size: 4em;
+        font-size: 3em;
 
-        top: -5em;
+        top: -6em;
+        left: 0;
 
         margin-top: 0;
     }
@@ -16562,6 +16562,10 @@ body
     {
         margin-bottom: 0;
     }
+    .section-special-cars #content-core h1
+    {
+        font-size: 1.7em;
+    }
     .section-special-cars .pictures
     {
         position: relative;
@@ -16572,7 +16576,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars1.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-special-cars .pictures .pic2
@@ -16580,7 +16584,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars2.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
     .section-special-cars .pictures .pic3
@@ -16588,7 +16592,7 @@ body
         width: 0;
         height: 0;
 
-        background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+        background: url(../../img/special-cars3.png) 100% 0 no-repeat transparent;
         background-size: 0;
     }
 }

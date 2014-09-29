@@ -27,7 +27,11 @@
     margin-top: 100px;
 }
 
-
+.navbar-collapse {
+    position: relative;
+    z-index: 12;
+    width: 100%;
+}
 
 #logobar {
     margin-top: -10em;
@@ -108,6 +112,10 @@
     }    
 }
 @media only screen and (max-width: 380px) {
+
+    .app-header {
+        margin-top: 0;
+    }
     .contentline {
         position: center;
         margin-bottom: 3em;
@@ -129,10 +137,18 @@
     }
     .karusell {
         width: 100%;
-        margin-top: 10em;
+        margin-top: 4em;
         position: relative;
         z-index: 2;
+        margin-bottom: -2em;
+        a.left.carousel-control span img {
+            height: 2em;
+        } 
+        a.right.carousel-control span img {
+            height: 2em;
+        } 
     }
+
     .app-box-body {
         padding: 3% 15% 10%;
     }
@@ -199,6 +215,8 @@
         z-index: 5;
         padding-top: 1em;
         padding-bottom: 3em;
+        min-width: 360px;
+        margin: -2em 0 -2em -2em;
         background: url(../../img/background.jpg) 0 0 repeat transparent;
         ul {
             li a {
@@ -208,7 +226,7 @@
     }
     .section-front-page .logo {
         display: hidden;
-        width: 28em;
+        //width: 28em;
         height: 18em;
         background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
         position:relative;
@@ -219,7 +237,7 @@
     } 
     .logo {
         display: hidden;
-        width: 28em;
+        //width: 28em;
         height: 18em;
         background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
         position:relative;
@@ -270,7 +288,7 @@
             #headericon {
             width: 100%;
             height: 10em;
-            margin-top: -16em;
+            margin-top: -14.5em;
             background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
             position: relative;
             z-index: 8;
@@ -287,25 +305,25 @@
     }
     .section-front-page .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
-        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
+        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
         position:relative;
         z-index: 6;
-        top: -9em;
-        left: 25%;
-        background-size: 50%;
+        top: -7em;
+        left: 30%;
+        background-size: 40%;
     } 
     .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
-        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
+        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
         position:relative;
         z-index: 6;
         top: -9em;
-        left: 25%;
-        background-size: 50%;
+        left: 30%;
+        background-size: 40%;
     } 
     .documentFirstHeading {
         font-family: 'Brush Script MT', 'italic';
@@ -413,25 +431,25 @@
     }
     .section-front-page .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
-        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
+        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
         position:relative;
         z-index: 6;
-        top: -9em;
-        left: 25%;
-        background-size: 50%;
+        top: -7em;
+        left: 30%;
+        background-size: 40%;
     } 
     .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
-        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
+        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
         position:relative;
         z-index: 6;
         top: -9em;
-        left: 25%;
-        background-size: 50%;
+        left: 30%;
+        background-size: 40%;
     } 
     .documentFirstHeading {
         font-family: 'Brush Script MT', 'italic';
@@ -518,7 +536,7 @@
     }
     .section-front-page .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
         background: url(../../img/logobutton_big.png) 100% 0% no-repeat transparent;
         position:relative;
@@ -526,9 +544,9 @@
     }   
     .logo {
         display: block;
-        width: 28em;
+        //width: 28em;
         height: 18em;
-        background: url(../../img/contentlogo.png) 100% 0% no-repeat transparent;
+        background: url(../../img/contentlogo.png) 0% 0% no-repeat transparent;
         position:relative;
         top: -13em;
     } 
@@ -747,6 +765,15 @@ body {
     text-align: center
 }
 
+@media only screen and (max-width: 980px) {
+    .part {
+        margin-bottom: 1em;
+    }
+    #service .extra {
+        border-image: none;
+        border-style: none;
+    }
+}
 #footerline {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -810,7 +837,7 @@ body {
 
         }
         hr {
-            color: #313337;
+            border: 1px solid #313337;
         }
     }
 }
@@ -847,13 +874,13 @@ body {
         margin-top: 2em;
     }
     .documentFirstHeading {
-        margin-top: -7.5em;
+        margin-top: 0em;
     }
     .documentDescription {
         font-size: 2em;
-        margin-bottom: 7em;
-        position: relative;
-        top: -7em;
+        //margin-bottom: 7em;
+        //position: relative;
+        margin-top: -3em;
     }
         #content-core {
             font-size: 1.5em;
@@ -865,20 +892,18 @@ body {
             }
         }
     .pictures {
-        position: relative;
-        top: 16em;
         .pic1 {
-            background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic2 {
-            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic3 {
-            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }        
@@ -890,13 +915,16 @@ body {
         margin-top: 2em;
     }
     .documentFirstHeading {
-        margin-top: -7.5em;
+        margin-top: -4em;
+        top: 0;
+        left: -38%;
     }
     .documentDescription {
         font-size: 2em;
-        margin-bottom: 7em;
-        position: relative;
-        top: -7em;
+        margin-top: 7em;
+        //margin-bottom: 7em;
+        //position: relative;
+        //top: -4em;
     }
         #content-core {
             font-size: 1.5em;
@@ -908,20 +936,18 @@ body {
             }
         }
     .pictures {
-        position: relative;
-        top: 16em;
         .pic1 {
-            background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic2 {
-            background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic3 {
-            background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }        
@@ -935,13 +961,15 @@ body {
     .documentFirstHeading {
         top: -1em;
         font-size: 4em;
-        margin-top: -8em;
+        margin-top: -4em;
+        left: -38%;
     }
     .documentDescription {
         font-size: 2em;
-        margin-bottom: 5em;
-        position: relative;
-        top: -7em;
+        margin-top: 6em;
+        //margin-bottom: 5em;
+        //position: relative;
+        //top: -4em;
     }
     #content-core {
         font-size: 1.5em;
@@ -953,20 +981,18 @@ body {
         }
     }
     .pictures {
-        position: relative;
-        top: 16em;
         .pic1 {
-            background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+            background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic2 {
-            background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+            background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }
         .pic3 {
-            background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+            background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
         }        
@@ -980,14 +1006,14 @@ body {
         margin-top: 2em;
     }
     .documentFirstHeading {
-        top: -4em;
+        top: -4.5em;
         font-size: 4em;
     }
     .documentDescription {
         font-size: 2em;
-        margin-bottom: 5em;
+        margin-bottom: 2em;
         position: relative;
-        top: -8em;
+        top: 0;
     }
     #content-core {
         font-size: 1.5em;
@@ -999,37 +1025,37 @@ body {
         }
     }
     .pictures {
-        position: relative;
-        top: 20em;
         .pic1 {
-            background: url(../../img/werkstatt_pic1.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
             width: 33%;
-            height: 18em;
+            height: 10em;
             background-size: 90%;
         }
         .pic2 {
-            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
             width: 33%;
-            height: 18em;
+            height: 10em;
             background-size: 90%;
         }
         .pic3 {
-            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
             width: 33%;
-            height: 18em;
+            height: 10em;
             background-size: 90%;
         }        
     }
 }
     .section-idee {
         .documentFirstHeading {
-            top: -2em;
+            top: -4em;
+            margin-top: 0em;
+            left: 0;
         }
         .documentDescription {
-            margin-top: 2em;
-            margin-bottom: 5em;
-            position: relative;
-            top: -8em;
+            margin-top: -3em;
+            margin-bottom: 2em;
+            //osition: relative;
+            //top: -9em;
         }
         #content-core {
             font-size: 1.5em;
@@ -1041,24 +1067,22 @@ body {
             }
         }
         .pictures {
-            position: relative;
-            top: 20em;
             .pic1 {
-                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+                background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }
             .pic2 {
-                background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+                background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }
             .pic3 {
-                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+                background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }        
         }
@@ -1070,12 +1094,13 @@ body {
         .documentFirstHeading {
             top: -2em;
             font-size: 4em;
+            left: 0;
         }
         .documentDescription {
             font-size: 2em;
-            margin-bottom: 5em;
+            //margin-bottom: 5em;
             position: relative;
-            top: -8em;
+            top: -2em;
         }
         #content-core {
             font-size: 1.5em;
@@ -1087,29 +1112,28 @@ body {
             }
         }
     .pictures {
-        position: relative;
-        top: 20em;
             .pic1 {
-                background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }
             .pic2 {
-                background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }
             .pic3 {
-                background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
                 width: 33%;
-                height: 18em;
+                height: 10em;
                 background-size: 90%;
             }        
         }
     }
 }
+
 @media only screen and (max-width: 381px) {
     .section-werkstatt {
         .documentFirstHeading {
@@ -1125,6 +1149,9 @@ body {
         }
         #content-core {
             margin-bottom: 0;
+            h1 {
+                font-size: 1.7em;
+            }
         }
         .pictures {
             position: relative;
@@ -1136,13 +1163,13 @@ body {
             background-size: 0;
         }
         .pic2 {
-            background: url(../../img/werkstatt_pic2.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic2.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
         }
         .pic3 {
-            background: url(../../img/werkstatt_pic3.png) 0 0 no-repeat transparent;
+            background: url(../../img/werkstatt_pic3.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
@@ -1154,6 +1181,7 @@ body {
             top: -5em;
             font-size: 4em;
             margin-top: 0;
+            left: 0;
         }
         .documentDescription {
             margin-bottom: 2em;
@@ -1164,24 +1192,27 @@ body {
         }
         #content-core {
             margin-bottom: 0;
+            h1 {
+                font-size: 1.7em;
+            }
         }
         .pictures {
-            position: relative;
-            top: 0em;
+            width: 100%;
+            height: 0;
             .pic1 {
-                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
             }
             .pic2 {
-                background: url(../../img/idee2.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee2.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
             }
             .pic3 {
-                background: url(../../img/idee1.png) 0 0 no-repeat transparent;
+            background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
@@ -1193,9 +1224,10 @@ body {
             margin-top: 2em;
         }
         .documentFirstHeading {
-            top: -5em;
-            font-size: 4em;
+            top: -6em;
+            font-size: 3em;
             margin-top: 0;
+            left: 0;
         }
         .documentDescription {
             margin-bottom: 3em;
@@ -1205,24 +1237,27 @@ body {
         }
         #content-core {
             margin-bottom: 0;
+            h1 {
+                font-size: 1.7em;
+            }
         }
         .pictures {
             position: relative;
             top: 0em;
             .pic1 {
-                background: url(../../img/special-cars1.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars1.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
             }
             .pic2 {
-                background: url(../../img/special-cars2.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars2.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
             }
             .pic3 {
-                background: url(../../img/special-cars3.png) 0 0 no-repeat transparent;
+                background: url(../../img/special-cars3.png) 100% 0 no-repeat transparent;
             width: 0;
             height: 0;
             background-size: 0;
