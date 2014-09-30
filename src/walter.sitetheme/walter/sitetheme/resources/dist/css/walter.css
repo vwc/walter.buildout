@@ -15154,7 +15154,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     width: 100%;
     height: 5em;
-    margin-top: 1em;
+    margin-top: 2em;
 
     background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 }
@@ -15450,7 +15450,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         height: 18em;
 
-        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
+        background: url(../../img/contentlogo.png) 100% 0 no-repeat transparent;
         background-size: 40%;
     }
     .documentFirstHeading
@@ -15737,7 +15737,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
         height: 18em;
 
-        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
+        background: url(../../img/contentlogo.png) 100% 0 no-repeat transparent;
     }
     .section-front-page #headericon
     {
@@ -16015,11 +16015,11 @@ body
 
     background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
 }
-.section-bestand a
+.section-bestand #content-core a
 {
     color: #cfb02a;
 }
-.section-bestand a:hover
+.section-bestand #content-core a:hover
 {
     text-decoration: none;
 
@@ -16047,11 +16047,11 @@ body
 
     text-shadow: 2px 3px #7e6b18;
 }
-.section-bestellung a
+.section-bestellung #content-core a
 {
     color: #cfb02a;
 }
-.section-bestellung a:hover
+.section-bestellung #content-core a:hover
 {
     text-decoration: none;
 

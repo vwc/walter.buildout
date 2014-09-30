@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="newport.sitecontent">
+<body>
+
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+    <section id="gallery">
+        <article id="content-core">
+            <tal:images tal:condition="view/has_images">
+            <div class="gallery" id="gallery-thumbs">
+              <tal:block tal:repeat="lines view/image_matrix">
+                <div class="row">
+                <tal:thumb tal:repeat="line lines">
+                <div class="col-xs-12 col-md-3" tal:define="item line/item">
+                  <a href="" class="link-gallery"
+                    tal:attributes="href item/original_url;
+                                    rel string:prettyPhoto[gallery];">
+                      <img class="xxthumbnail"
+                        tal:attributes="src item/thumb_url;
+                                        width item/thumb_width;
+                                        height item/thumb_height;
+                                        data-image-url item/original_url;
+                                        data-image-width item/original_width;
+                                        data-image-height item/original_height;
+                                        alt item/desc;
+                                        class string:img-thumbnail" />
+                  </a>
+                </div>
+                </tal:thumb>
+                </div>
+                <div class="gallery-clear">&nbsp;</div>
+              </tal:block>
+            </div>
+            </tal:images>
+
+            <div class="alert" tal:condition="not:view/has_images">
+                <h4>Info</h4>
+                <p>Es gibt keine Bilder in diesem Ordner</p>
+            </div>
+        </article>
+    </section>
+  </metal:content-core>
+</metal:main>
+
+</body>
+</html>
+
