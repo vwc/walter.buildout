@@ -15,7 +15,7 @@
 
     h3 {
         font-weight: bolder;
-    }  
+    }
 }
 
 .app-box-body {
@@ -30,7 +30,6 @@
 .navbar-collapse {
     position: relative;
     z-index: 12;
-    width: 100%;
 }
 
 #logobar {
@@ -53,7 +52,7 @@
     background: url(../../img/zacken.png) 50% 100% repeat-x transparent;
     position:relative;
     z-index: 3;
-    top: -20.5em;
+    top: -21em;
 }
 .section-front-page {
     #zacken-rotate {
@@ -61,9 +60,9 @@
         height: 1em;
         background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
         position: relative;
-        top: -2.5em;
+        top: -1em;
         z-index: 7
-    }   
+    }
 }
 #zacken-rotate {
     width: 100%;
@@ -86,32 +85,51 @@
     #headericon {
         width: 100%;
         height: 5em;
-        margin-top: 2em;
+        position: relative;
+        margin-top: 1em;
         background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 
-    }    
+    }
 }
 
 .section-bestellung {
     #headericon {
         width: 100%;
         height: 5em;
-        margin-top: 2em;
+        position: relative;
+        margin-top: 1em;
         background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 
-    }    
+    }
+
 }
 
 .section-bestand {
     #headericon {
         width: 100%;
         height: 5em;
-        margin-top: 2em;
+        position: relative;
+        margin-top: 1em;
         background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 
-    }    
+    }
 }
 @media only screen and (max-width: 380px) {
+    .carousel {
+      max-height: 0px;
+      height: 120px;
+    }
+    .section-front-page {
+      .app-header {
+        margin-top: 15em;
+      }
+    }
+    .navbar-collapse {
+      width: 100%;background: url(../../img/background.jpg) 0 0 repeat transparent;
+      .navbar-nav {
+        margin-left: 1em;
+      }
+    }
     .app-header {
         margin-top: 0;
     }
@@ -126,7 +144,7 @@
         .lineheader {
             h1 {
                 font-family: 'Brush Script MT', 'italic';
-                font-size: 4em;
+                font-size: 3.5em;
                 //padding-bottom: 2em;
                 text-align: center;
                 color: #cfb02a;
@@ -142,10 +160,10 @@
         margin-bottom: -2em;
         a.left.carousel-control span img {
             height: 2em;
-        } 
+        }
         a.right.carousel-control span img {
             height: 2em;
-        } 
+        }
     }
 
     .app-box-body {
@@ -157,9 +175,9 @@
             height: 1em;
             background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
             position: relative;
-            top: -17em;
+            top: 1em;
             z-index: 7
-        }   
+        }
             #headericon {
             width: 100%;
             height: 10em;
@@ -169,6 +187,16 @@
             z-index: 8;
             background-size: 25%;
         }
+        #app-header {
+          margin-top: 0;
+        }
+        #zacken {
+          top: 0;
+        }
+
+    }
+    #zacken {
+      top: 0;
     }
     #zacken-rotate {
         width: 100%;
@@ -177,7 +205,7 @@
         position: relative;
         top: -1em;
         z-index: 7;
-    } 
+    }
     .documentDescription {
         margin-top: 9em;
     }
@@ -191,11 +219,11 @@
         z-index: 3;
     }
     .app-brandbar {
-        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
         height: 18em;
         position: relative;
         z-index: 2;
-        margin-top: 6em;
+        margin-top: 2.2em;
     }
     #logobar {
         margin-top: 5em;
@@ -233,7 +261,7 @@
         top: -9em;
         left: 25%;
         background-size: 50%;
-    } 
+    }
     .logo {
         display: hidden;
         //width: 28em;
@@ -244,9 +272,24 @@
         top: -9em;
         left: 25%;
         background-size: 50%;
-    } 
+    }
 }
 @media only screen and (max-width: 980px) and (min-width: 381px) {
+  #karusellbackground {
+    height: 18em;
+  }
+  .section-front-page {
+    #zacken {
+      top: -20em;
+    }
+    #zacken-rotate {
+      top: -1em;
+    }
+  }
+    .carousel {
+      max-height: 0px;
+      height: 0;
+    }
     .contentline {
         position: center;
         margin-bottom: 3em;
@@ -258,7 +301,7 @@
         .lineheader {
             h1 {
                 font-family: 'Brush Script MT', 'italic';
-                font-size: 4em;
+                font-size: 3.5em;
                 //padding-bottom: 2em;
                 text-align: center;
                 color: #cfb02a;
@@ -281,13 +324,13 @@
             height: 1em;
             background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
             position: relative;
-            top: -8em;
+            top: -1em;
             z-index: 7
-        }   
+        }
             #headericon {
             width: 100%;
             height: 10em;
-            margin-top: -14.5em;
+            margin-top: -8em;
             background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
             position: relative;
             z-index: 8;
@@ -312,7 +355,7 @@
         top: -7em;
         left: 30%;
         background-size: 40%;
-    } 
+    }
     .logo {
         display: block;
         //width: 28em;
@@ -321,9 +364,9 @@
         position:relative;
         z-index: 6;
         top: -9em;
-        left: 30%;
+        left: -30%;
         background-size: 40%;
-    } 
+    }
     .documentFirstHeading {
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
@@ -334,11 +377,11 @@
         z-index: 3;
     }
     .app-brandbar {
-        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
-        height: 18em;
+        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
+        height: 17em;
         position: relative;
         z-index: 2;
-        margin-top: 10.3em;
+        margin-top: 8.5em;
     }
     #logobar {
         margin-top: 5em;
@@ -355,7 +398,7 @@
     #navigationbar {
         position: relative;
         //z-index: 5;
-        padding-top: 1em;
+        padding-top: 0em;
         padding-bottom: 3em;
     }
     .abstand {
@@ -373,6 +416,9 @@
 }
 
 @media only screen and (max-width: 768px) and (min-width: 768px){
+    #karusellbackground {
+      height: 14em;
+    }
     .contentline {
         position: center;
         margin-bottom: 3em;
@@ -384,7 +430,7 @@
         .lineheader {
             h1 {
                 font-family: 'Brush Script MT', 'italic';
-                font-size: 4em;
+                font-size: 3.5em;
                 //padding-bottom: 2em;
                 text-align: center;
                 color: #cfb02a;
@@ -407,9 +453,9 @@
             height: 1em;
             background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
             position: relative;
-            top: -12em;
+            top: -1em;
             z-index: 7
-        }   
+        }
             #headericon {
             width: 100%;
             height: 10em;
@@ -418,6 +464,9 @@
             position: relative;
             z-index: 8;
             background-size: 25%;
+        }
+        #zacken {
+          top: -21em;
         }
     }
     #zacken-rotate {
@@ -437,8 +486,13 @@
         z-index: 6;
         top: -7em;
         left: 30%;
-        background-size: 40%;
-    } 
+        background-size: 35%;
+    }
+    .app-header {
+      .logobutton {
+        margin-top: -5em;
+      }
+    }
     .logo {
         display: block;
         //width: 28em;
@@ -449,7 +503,7 @@
         top: -9em;
         left: 30%;
         background-size: 40%;
-    } 
+    }
     .documentFirstHeading {
         font-family: 'Brush Script MT', 'italic';
         font-size: 5em;
@@ -460,11 +514,11 @@
         z-index: 3;
     }
     .app-brandbar {
-        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
+        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
         height: 18em;
         position: relative;
         z-index: 2;
-        margin-top: 10.3em;
+        margin-top: 8.5em;
     }
     #logobar {
         margin-top: 5em;
@@ -510,7 +564,7 @@
         .lineheader {
             h1 {
                 font-family: 'Brush Script MT', 'italic';
-                font-size: 4em;
+                font-size: 3.5em;
                 //padding-bottom: 2em;
                 text-align: center;
                 color: #cfb02a;
@@ -540,7 +594,7 @@
         background: url(../../img/logobutton_big.png) 100% 0% no-repeat transparent;
         position:relative;
         top: -13em;
-    }   
+    }
     .logo {
         display: block;
         //width: 28em;
@@ -548,11 +602,11 @@
         background: url(../../img/contentlogo.png) 100% 0% no-repeat transparent;
         position:relative;
         top: -13em;
-    } 
+    }
     .section-front-page #headericon {
         width: 100%;
         height: 10em;
-        margin-top: -10em;
+        margin-top: -7.5em;
         background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
         position: relative;
         z-index: 8;
@@ -569,11 +623,11 @@
        // left: -35%;
     }
     .app-brandbar {
-        background: url(../../img/altern_background.png) 50% 100% no-repeat transparent;
-        height: 18em;
+        background: url(../../img/altern_background.jpg) 50% 0% no-repeat transparent;
+        height: 16em;
         position: relative;
         z-index: 2;
-        margin-top: -22.6em;
+        margin-top: -23em;
     }
     #navigationbar {
         padding-top: 3em;
@@ -590,7 +644,7 @@
         position: relative;
         z-index: 2;
     }
-    
+
 }
 //.logo {
 //    width: 24em;
@@ -601,7 +655,7 @@
 
 
 #facebook {
-    background: url(../../img/fbbanner.png) 50% 50% no-repeat transparent;
+    background: url(../../img/fbbanner.png) 50% 0% no-repeat transparent;
     width: 50px;
     height: 100px;
     //margin-top: -106px;
@@ -638,7 +692,7 @@ body {
     .logobutton {
         background: url(../../img/icon_beschreibungstext.png) 50% 50% no-repeat transparent;
         height: 7em;
-        padding-top: 20%; 
+        padding-top: 20%;
     }
     p {
         font-size: 1.9em;
@@ -659,6 +713,7 @@ body {
 
 #service {
     margin-top: 4em;
+    margin-bottom: 2em;
     ul {
         list-style: none;
     }
@@ -670,7 +725,7 @@ body {
                 border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
     }
     a {
-        font-size: 1.5em;
+        font-size: 1.4em;
         text-decoration: none;
         text-transform: uppercase;
         color: #313337;
@@ -765,7 +820,21 @@ body {
     text-align: center
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 981px) {
+/*  .section-front-page {
+    #zacken-rotate {
+      top: -1em;
+    }
+    #headericon {
+      margin-top: -7.5em;
+    }
+    #zacken {
+      top: -20em;
+    }
+    .app-header .logobutton {
+      margin-top: -2em;
+    }
+  }*/
     .part {
         margin-bottom: 1em;
     }
@@ -796,22 +865,30 @@ body {
             a:hover {
                 text-decoration: none;
                 color:#313337;
-            }      
+            }
     }
 
     .documentDescription {
         font-size: 2em;
         margin-bottom: 2em;
-        margin-top: -4em;
+        margin-top: -5em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
     #content-core {
-        font-size: 1.5em;            
+        font-size: 1.5em;
         margin-bottom: 2em;
         h1 {
             font-size: 2em;
             font-weight: bolder;
             margin-bottom: 1em;
-            text-shadow: 2px 3px #7e6b18;
+            color: #637173;
+            text-shadow: 2px 3px #fff;
         }
     }
 }
@@ -824,13 +901,20 @@ body {
             a:hover {
                 text-decoration: none;
                 color:#313337;
-            }        
+            }
     }
 
     .documentDescription {
         font-size: 2em;
         margin-bottom: 2em;
-        margin-top: -4em;
+        margin-top: -5em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
     #content-core {
         font-size: 1.5em;
@@ -839,7 +923,8 @@ body {
             font-size: 2em;
             font-weight: bolder;
             margin-bottom: 1em;
-            text-shadow: 2px 3px #7e6b18;
+            color: #637173;
+            text-shadow: 2px 3px #fff;
 
         }
         hr {
@@ -860,10 +945,17 @@ body {
         font-size: 2em;
         //margin-bottom: 15em;
         margin-top: -4em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
     #content-core {
 
-        font-size: 1.5em;            
+        font-size: 1.5em;
 
 
         margin-bottom: 2em;
@@ -871,22 +963,31 @@ body {
             font-size: 2em;
             font-weight: bolder;
             margin-bottom: 1em;
-            text-shadow: 2px 3px #7e6b18;
+            color: #637173;
+            text-shadow: 2px 3px #fff;
         }
     }
 }
 .section-werkstatt {
     #headericon {
-        margin-top: 2em;
+      margin-top: 1em;
+      position: relative;
     }
     .documentFirstHeading {
-        margin-top: 0em;
+        margin-top: 0.5em;
     }
     .documentDescription {
         font-size: 2em;
-        //margin-bottom: 7em;
+        margin-bottom: 0;
         //position: relative;
-        margin-top: -3em;
+        margin-top: -4em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
         #content-core {
             font-size: 1.5em;
@@ -894,7 +995,11 @@ body {
                 font-size: 2em;
                 font-weight: bolder;
                 margin-bottom: 1em;
-                text-shadow: 2px 3px #7e6b18;
+                color: #637173;
+                text-shadow: 2px 3px #fff;
+            }
+            h2 {
+              text-shadow: 2px 2px #fff;
             }
         }
     .pictures {
@@ -912,25 +1017,30 @@ body {
             background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
-        }        
+        }
     }
 }
 
 .section-idee {
     #headericon {
-        margin-top: 2em;
+        margin-top: 1em;
+        position: relative;
     }
     .documentFirstHeading {
-        margin-top: -4em;
+        margin-top: -3.5em;
         top: 0;
-        left: -38%;
+        left: -34%;
     }
     .documentDescription {
         font-size: 2em;
-        margin-top: 7em;
-        //margin-bottom: 7em;
-        //position: relative;
-        //top: -4em;
+        margin-top: 5em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
         #content-core {
             font-size: 1.5em;
@@ -938,7 +1048,8 @@ body {
                 font-size: 2em;
                 font-weight: bolder;
                 margin-bottom: 1em;
-                text-shadow: 2px 3px #7e6b18;
+                color: #637173;
+                text-shadow: 2px 3px #fff;
             }
         }
     .pictures {
@@ -956,26 +1067,31 @@ body {
             background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
-        }        
+        }
     }
 }
 
 .section-special-cars {
     #headericon {
-        margin-top: 2em;
+      margin-top: 1em;
+      position: relative;
     }
     .documentFirstHeading {
         top: -1em;
         font-size: 4em;
-        margin-top: -4em;
-        left: -38%;
+        margin-top: -3.5em;
+        left: -34%;
     }
     .documentDescription {
         font-size: 2em;
-        margin-top: 6em;
-        //margin-bottom: 5em;
-        //position: relative;
-        //top: -4em;
+        margin-top: 4em;
+        padding-bottom: 1em;
+        border-width: 0px 0px 14px;
+        border-style: solid;
+        -moz-border-image: url(../../img/description.png) 27 repeat;
+        -webkit-border-image: url(../../img/description.png) 27 repeat;
+             -o-border-image: url(../../img/description.png) 27 repeat;
+                border-image: url(../../img/description.png) 27 fill repeat;
     }
     #content-core {
         font-size: 1.5em;
@@ -983,7 +1099,8 @@ body {
             font-size: 2em;
             font-weight: bolder;
             margin-bottom: 1em;
-            text-shadow: 2px 3px #7e6b18;
+            color: #637173;
+            text-shadow: 2px 3px #fff;
         }
     }
     .pictures {
@@ -1001,7 +1118,7 @@ body {
             background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
             width: 33%;
             height: 18em;
-        }        
+        }
     }
 
 }
@@ -1009,16 +1126,17 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 980px){
     .section-werkstatt {
     #headericon {
-        margin-top: 2em;
+        margin-top: 1em;
     }
     .documentFirstHeading {
-        top: -4.5em;
+        top: -5em;
         font-size: 4em;
     }
     .documentDescription {
         font-size: 2em;
         margin-bottom: 2em;
         position: relative;
+        margin-top: -5em;
         top: 0;
     }
     #content-core {
@@ -1027,7 +1145,8 @@ body {
             font-size: 2em;
             font-weight: bolder;
             margin-bottom: 1em;
-            text-shadow: 2px 3px #7e6b18;
+            color: #637173;
+            text-shadow: 2px 3px #fff;
         }
     }
     .pictures {
@@ -1048,17 +1167,17 @@ body {
             width: 33%;
             height: 10em;
             background-size: 90%;
-        }        
+        }
     }
 }
     .section-idee {
         .documentFirstHeading {
-            top: -4em;
+            top: -3.5em;
             margin-top: 0em;
-            left: 0;
+            left: -3%;
         }
         .documentDescription {
-            margin-top: -3em;
+            margin-top: -4em;
             margin-bottom: 2em;
             //osition: relative;
             //top: -9em;
@@ -1069,7 +1188,8 @@ body {
                 font-size: 2em;
                 font-weight: bolder;
                 margin-bottom: 1em;
-                text-shadow: 2px 3px #7e6b18;
+                color: #637173;
+                text-shadow: 2px 3px #fff;
             }
         }
         .pictures {
@@ -1090,23 +1210,24 @@ body {
                 width: 33%;
                 height: 10em;
                 background-size: 90%;
-            }        
+            }
         }
     }
     .section-special-cars {
         #headericon {
-            margin-top: 2em;
+            position:relative;
+            margin-top: 1em;
         }
         .documentFirstHeading {
-            top: -2em;
+            top: -2.5em;
             font-size: 4em;
             left: 0;
         }
         .documentDescription {
             font-size: 2em;
-            //margin-bottom: 5em;
+            margin-bottom: -2em;
             position: relative;
-            top: -2em;
+            top: -3.5em;
         }
         #content-core {
             font-size: 1.5em;
@@ -1114,7 +1235,8 @@ body {
                 font-size: 2em;
                 font-weight: bolder;
                 margin-bottom: 1em;
-                text-shadow: 2px 3px #7e6b18;
+                color: #637173;
+                text-shadow: 2px 3px #fff;
             }
         }
     .pictures {
@@ -1135,7 +1257,7 @@ body {
                 width: 33%;
                 height: 10em;
                 background-size: 90%;
-            }        
+            }
         }
     }
 }
@@ -1179,7 +1301,7 @@ body {
             width: 0;
             height: 0;
             background-size: 0;
-        }        
+        }
     }
 }
     .section-idee {
@@ -1222,7 +1344,7 @@ body {
             width: 0;
             height: 0;
             background-size: 0;
-            }        
+            }
         }
     }
     .section-special-cars {
@@ -1267,7 +1389,27 @@ body {
             width: 0;
             height: 0;
             background-size: 0;
-            }        
+            }
         }
     }
+}
+
+@media only screen and (max-width:980px) {
+.carousel-indicators {
+  margin-top: -34px;
+}
+
+}
+#karusellbackground {
+  background: url(../../img/bo_play_pattern.png) 0 0 repeat transparent;
+  //height: 24em;
+  position: relative;
+}
+
+.carousel-indicators {
+  margin-top: -19px;
+}
+
+.carousel {
+  max-height: 390px;
 }
