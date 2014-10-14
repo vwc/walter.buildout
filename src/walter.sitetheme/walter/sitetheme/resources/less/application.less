@@ -28,6 +28,10 @@
 }
 
 .navbar-collapse {
+    .logo {
+        background: none;
+    }
+    overflow-x: visible;
     position: relative;
     z-index: 12;
 }
@@ -114,7 +118,14 @@
 
     }
 }
-@media only screen and (max-width: 380px) {
+@media (max-width: 380px) {
+    .logo {
+        background: none;
+    }
+    #zacken {
+        background: none;
+    }
+
     .carousel {
       max-height: 0px;
       height: 120px;
@@ -125,7 +136,9 @@
       }
     }
     .navbar-collapse {
-      width: 100%;background: url(../../img/background.jpg) 0 0 repeat transparent;
+      width: 100%;
+      position: relative;
+      background: url(../../img/background.jpg) 0 0 repeat transparent;
       .navbar-nav {
         margin-left: 1em;
       }
@@ -235,7 +248,8 @@
         padding-top: 14px;
     }
     .app-navbar {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar {
         position: relative;
@@ -274,7 +288,7 @@
         background-size: 50%;
     }
 }
-@media only screen and (max-width: 980px) and (min-width: 381px) {
+@media (max-width: 980px) and (min-width: 381px) {
   #karusellbackground {
     height: 18em;
   }
@@ -393,7 +407,8 @@
         padding-top: 14px;
     }
     .app-navbar {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar {
         position: relative;
@@ -415,7 +430,7 @@
 
 }
 
-@media only screen and (max-width: 768px) and (min-width: 768px){
+@media (max-width: 768px) and (min-width: 768px){
     #karusellbackground {
       height: 14em;
     }
@@ -530,7 +545,8 @@
         padding-top: 14px;
     }
     .app-navbar {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar {
         position: relative;
@@ -551,7 +567,7 @@
 
 
 }
-@media only screen and (min-width: 981px) {
+@media (min-width: 981px) {
     .contentline {
         position: center;
         margin-bottom: 3em;
@@ -637,7 +653,7 @@
     }
 }
 
-@media only screen and (min-width: 1300px) {
+@media(min-width: 1300px) {
     .karusell {
         width: 1280px;
         margin-top: -23em;
@@ -668,7 +684,7 @@
 
 
 
-@media only screen and (max-width: 1280px) {}
+@media (max-width: 1280px) {}
 /**
  * body
  */
@@ -820,7 +836,7 @@ body {
     text-align: center
 }
 
-@media only screen and (max-width: 981px) {
+@media (max-width: 981px) {
 /*  .section-front-page {
     #zacken-rotate {
       top: -1em;
@@ -1086,6 +1102,7 @@ body {
         font-size: 2em;
         margin-top: 4em;
         padding-bottom: 1em;
+        margin-bottom: 0;
         border-width: 0px 0px 14px;
         border-style: solid;
         -moz-border-image: url(../../img/description.png) 27 repeat;
@@ -1123,7 +1140,7 @@ body {
 
 }
 
-@media only screen and (min-width: 768px) and (max-width: 980px){
+@media (min-width: 768px) and (max-width: 980px){
     .section-werkstatt {
     #headericon {
         margin-top: 1em;
@@ -1262,7 +1279,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 381px) {
+@media (max-width: 381px) {
     .section-werkstatt {
         .documentFirstHeading {
             top: -5em;
@@ -1394,7 +1411,12 @@ body {
     }
 }
 
-@media only screen and (max-width:980px) {
+@media (max-width:320px) {
+    #karusellbackground {
+        height: 0em;
+    }
+}
+@media (max-width:980px) {
 .carousel-indicators {
   margin-top: -34px;
 }
@@ -1413,3 +1435,5 @@ body {
 .carousel {
   max-height: 390px;
 }
+
+

@@ -15099,6 +15099,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 {
     position: relative;
     z-index: 12;
+
+    overflow-x: visible;
+}
+.navbar-collapse .logo
+{
+    background: none;
 }
 #logobar
 {
@@ -15186,8 +15192,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     background: url(../../img/muster.png) 50% 100% no-repeat transparent;
 }
-@media only screen and (max-width: 380px)
+@media (max-width: 380px)
 {
+    .logo
+    {
+        background: none;
+    }
+    #zacken
+    {
+        background: none;
+    }
     .carousel
     {
         height: 120px;
@@ -15199,6 +15213,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
     .navbar-collapse
     {
+        position: relative;
+
         width: 100%;
 
         background: url(../../img/background.jpg) 0 0 repeat transparent;
@@ -15342,7 +15358,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
     .app-navbar
     {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar
     {
@@ -15389,7 +15406,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         background-size: 50%;
     }
 }
-@media only screen and (max-width: 980px) and (min-width: 381px)
+@media (max-width: 980px) and (min-width: 381px)
 {
     #karusellbackground
     {
@@ -15542,7 +15559,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
     .app-navbar
     {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar
     {
@@ -15564,7 +15582,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         float: right;
     }
 }
-@media only screen and (max-width: 768px) and (min-width: 768px)
+@media (max-width: 768px) and (min-width: 768px)
 {
     #karusellbackground
     {
@@ -15712,7 +15730,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     }
     .app-navbar
     {
-        height: 6em;
+        min-height: 6em;
+        max-height: 6em;
     }
     #navigationbar
     {
@@ -15734,7 +15753,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         float: right;
     }
 }
-@media only screen and (min-width: 981px)
+@media (min-width: 981px)
 {
     .contentline
     {
@@ -15845,7 +15864,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         padding-bottom: 13em;
     }
 }
-@media only screen and (min-width: 1300px)
+@media (min-width: 1300px)
 {
     .karusell
     {
@@ -16050,7 +16069,7 @@ body
 {
     text-align: center;
 }
-@media only screen and (max-width: 981px)
+@media (max-width: 981px)
 {
   /*  .section-front-page {
     #zacken-rotate {
@@ -16367,6 +16386,7 @@ body
     font-size: 2em;
 
     margin-top: 4em;
+    margin-bottom: 0;
     padding-bottom: 1em;
 
     border-width: 0 0 14px;
@@ -16411,7 +16431,7 @@ body
 
     background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
 }
-@media only screen and (min-width: 768px) and (max-width: 980px)
+@media (min-width: 768px) and (max-width: 980px)
 {
     .section-werkstatt #headericon
     {
@@ -16582,7 +16602,7 @@ body
         background-size: 90%;
     }
 }
-@media only screen and (max-width: 381px)
+@media (max-width: 381px)
 {
     .section-werkstatt .documentFirstHeading
     {
@@ -16749,7 +16769,14 @@ body
         background-size: 0;
     }
 }
-@media only screen and (max-width: 980px)
+@media (max-width: 320px)
+{
+    #karusellbackground
+    {
+        height: 0;
+    }
+}
+@media (max-width: 980px)
 {
     .carousel-indicators
     {
