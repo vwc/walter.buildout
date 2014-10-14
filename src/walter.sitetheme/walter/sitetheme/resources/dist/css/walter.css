@@ -15102,10 +15102,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     overflow-x: visible;
 }
-.navbar-collapse .logo
-{
-    background: none;
-}
 #logobar
 {
     position: relative;
