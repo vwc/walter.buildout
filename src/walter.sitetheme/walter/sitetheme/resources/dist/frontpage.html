@@ -110,15 +110,24 @@
 					</div>
 				</div>
 			</div>-->
-			      <div class="container">
-          <div><a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a></div>
-      </div>
+			<div class="container">
+				<div><a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a></div>
+			</div>
 			<div class="collapse navbar-collapse app-navbar-collapse">
-				<div class="container">
+			<div class="container logobar">
+				<div class="row">
+					<div class="col-xs-4 col-md-4"></div>
+					<div id="logo" class="col-xs-4 col-md-4">
+					<a href="/"><img class="img-responsive" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a>				
+					</div>
+					<div class="col-xs-4 col-md-4"></div>
+				</div>
+			</div>
+				<div class="container" id="navigationbar">
 
-					<div class="row" id="navigationbar">
-						<div class="col-xs-6 col-md-4">
-							<ul class="nav navbar-nav left">
+					<div class="row" >
+						<div class="col-xs-6 col-md-4 pull-left menu-left">
+							<ul class="nav navbar-nav">
 								<li><a href="/idee" id="idee">IDEE</a></li>
 								<li>
 								<img class="star" src="/++theme++walter.sitetheme/img/star.png" />
@@ -130,9 +139,11 @@
 								<li><a href="/bestellung" id="neuwagen">BESTELLUNG</a></li>
 							</ul>
 						</div>
-						<div class="col-xs-6 col-md-4 abstand"></div>
-						<div class="col-xs-6 col-md-4">
-							<ul class="nav navbar-nav right">
+					<!--	<div class="col-xs-6 col-md-4 abstand">
+				<a href="/" id="logo"><img class="image-responsive center-block" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a>	
+						</div> -->
+						<div class="col-xs-6 col-md-4 pull-right menu-right">
+							<ul class="nav navbar-nav">
 							    <li><a href="/bestand" id="gebraucht">BESTAND</a></li>
 							    <li>
 								<img class="star" src="/++theme++walter.sitetheme/img/star.png" />
@@ -146,17 +157,12 @@
 						</div>
 					</div>
 
-					<div class="row" id="logobar">
-						<div class="col-xs-12 col-md-4"></div>
-						<div class="col-xs-12 col-md-4">
-							<a class="logo" href="/"></a>
-						</div>
-						<div class="col-xs-12 col-md-4"></div>
-					</div>
 				</div>
 			</div>
+
 			<div class="container" id="zacken"></div>
 		</nav>
+
 		<!-- div class="app-brandbar"></div> /.app-brandbar -->
 		<div id="karusellbackground">
 		<div class="container karusell">
@@ -194,7 +200,9 @@
 	</div>
 </div>
 		<div class="container" id="zacken-rotate"></div>
-		<div class="container" id="headericon"></div>
+		<div class="container" id="headericon">
+<img class="img-responsive center-block" src="/++theme++walter.sitetheme/img/logobuttonsmall.png">
+		</div>
 
 		<div class="app-header">
         	<div class="container">
@@ -210,6 +218,7 @@
         <div class="container">
     		<div role="main">
     <!--		<main class="app-content-body">
+
     			<div class="container app-page" id="content">
     				<div class="jumbotron">
                        <h1>Boilerplate theme template
@@ -230,12 +239,12 @@
     	<div class="container" role="main">
 			<div class="row contentline" id="verkauf">
 				<ul class="">
-					<div class="col-xs-12 col-md-5 line">
+					<div class="col-xs-4 col-md-5 line">
 					</div>
-					<div class="col-xs-12 col-md-2 lineheader">
+					<div class="col-xs-4 col-md-2 lineheader">
 						<h1>Verkauf</h1>
 					</div>
-					<div class="col-xs-12 col-md-5 line">
+					<div class="col-xs-4 col-md-5 line">
 					</div>
 				</ul>
 			</div>
@@ -289,12 +298,12 @@
             </div>
 
 						<div class="row contentline" id="werkstatt">
-								<div class="col-xs-12 col-md-5 line">
+								<div class="col-xs-4 col-md-5 line">
 								</div>
-								<div class="col-xs-12 col-md-2 lineheader">
+								<div class="col-xs-4 col-md-2 lineheader">
 									<h1>Werkstatt</h1>
 								</div>
-								<div class="col-xs-12 col-md-5 line">
+								<div class="col-xs-4 col-md-5 line">
 								</div>
 						</div>
 						<div class="row" id="werkbody">
@@ -306,12 +315,12 @@
 							</div>
 						</div>
 						<div class="row contentline">
-								<div class="col-xs-12 col-md-5 line">
+								<div class="col-xs-4 col-md-5 line">
 								</div>
-								<div class="col-xs-12 col-md-2 lineheader">
+								<div class="col-xs-4 col-md-2 lineheader">
 									<h1>Leistungen</h1>
 								</div>
-								<div class="col-xs-12 col-md-5 line">
+								<div class="col-xs-4 col-md-5 line">
 								</div>
 						</div>
 
@@ -416,7 +425,7 @@ else window.onload = downloadJSAtOnload;
     s.parentNode.insertBefore(wf, s);
   })();
 </script>
-<!-- Piwik -->
+<!-- Piwik 
 <script type="text/javascript">
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
@@ -429,7 +438,7 @@ else window.onload = downloadJSAtOnload;
 	g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<noscript><p><img src="//tkr.ade25.de/piwik.php?idsite=113" style="border:0;" alt="" /></p></noscript>
+<noscript><p><img src="//tkr.ade25.de/piwik.php?idsite=113" style="border:0;" alt="" /></p></noscript>-->
 <!-- End Piwik Code -->
     </div>
 	</body>

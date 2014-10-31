@@ -28,7 +28,7 @@
   <script src="dist/js/bootstrap.min.js"></script>
   <!-- Favicons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="../assets/ico/favicon.png">   
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
   <body>
@@ -84,7 +84,7 @@
                       <li class="divider"></li>
                       <li class="dropdown-header">Settings</li>
                       <li><a href="#">Filter options</a></li>
-                      <li><a href="#">Add...</a></li> 
+                      <li><a href="#">Add...</a></li>
             </ul>
           </li>
         </ul>
@@ -102,7 +102,7 @@
         </button>
         <a class="navbar-brand visible-xs" href="/">My Carman!</a>
       </div>
-      <!-- Collect the nav links, forms, and other content for toggling 
+      <!-- Collect the nav links, forms, and other content for toggling
       <div class="container">
         <div class="row">
           <div class="navbar-brand">
@@ -110,15 +110,24 @@
           </div>
         </div>
       </div>-->
-            <div class="container">
-          <div><a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a></div> 
+      <div class="container">
+        <div><a id="facebook" href="https://www.facebook.com/pages/My-carman/1445243735749911?fref=ts"></a></div>
       </div>
       <div class="collapse navbar-collapse app-navbar-collapse">
-        <div class="container">
+      <div class="container logobar">
+        <div class="row">
+          <div class="col-xs-4 col-md-4"></div>
+          <div id="logo" class="col-xs-4 col-md-4">
+          <a href="/"><img class="img-responsive" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a>        
+          </div>
+          <div class="col-xs-4 col-md-4"></div>
+        </div>
+      </div>
+        <div class="container" id="navigationbar">
 
-          <div class="row" id="navigationbar">
-            <div class="col-xs-6 col-md-4">
-              <ul class="nav navbar-nav left">
+          <div class="row" >
+            <div class="col-xs-6 col-md-4 pull-left menu-left">
+              <ul class="nav navbar-nav">
                 <li><a href="/idee" id="idee">IDEE</a></li>
                 <li>
                 <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
@@ -127,12 +136,14 @@
                 <li>
                 <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
                 </li>
-                <li><a href="/bestellung" id="neuwagen">BESTELLUNG</a></li>               
+                <li><a href="/bestellung" id="neuwagen">BESTELLUNG</a></li>
               </ul>
             </div>
-            <div class="col-xs-6 col-md-4 abstand"></div>
-            <div class="col-xs-6 col-md-4">
-              <ul class="nav navbar-nav right">
+          <!--  <div class="col-xs-6 col-md-4 abstand">
+        <a href="/" id="logo"><img class="image-responsive center-block" src="/++theme++walter.sitetheme/img/logobutton_big.png" /></a> 
+            </div> -->
+            <div class="col-xs-6 col-md-4 pull-right menu-right">
+              <ul class="nav navbar-nav">
                   <li><a href="/bestand" id="gebraucht">BESTAND</a></li>
                   <li>
                 <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
@@ -141,29 +152,23 @@
                 <li>
                 <img class="star" src="/++theme++walter.sitetheme/img/star.png" />
                 </li>
-                <li><a href="/kontakt" id="kontaktnav">KONTAKT</a></li>             
+                <li><a href="/kontakt" id="kontaktnav">KONTAKT</a></li>
               </ul>
             </div>
           </div>
 
-          <div class="row" id="logobar">
-            <div class="col-xs-12 col-md-4"></div>
-            <div class="col-xs-12 col-md-4">
-              <a class="logo" href="/"></a>
-            </div>
-            <div class="col-xs-12 col-md-4"></div>
-          </div>
         </div>
       </div>
+
       <div class="container" id="zacken"></div>
     </nav>
-
+  <div class="app-background"></div>
   <div class="app-brandbar">
         <div class="container"></div>
     </div> <!-- /.app-brandbar -->
   <div class="container" id="zacken-rotate"></div>
     <div class="container" id="headericon">
-
+         <img class="center-block" src="/++theme++walter.sitetheme/img/muster.png" />
     </div>
       <!--<div class="container pictures">
       <div class="row">
@@ -202,12 +207,12 @@
     <div class="app-content">
       <div class="container" role="main">
               <div class="row contentline">
-                <div class="col-xs-12 col-md-5 line">
+                <div class="col-xs-4 col-md-5 line">
                 </div>
-                <div class="col-xs-12 col-md-2 lineheader">
+                <div class="col-xs-4 col-md-2 lineheader">
                   <h1>Leistungen</h1>
                 </div>
-                <div class="col-xs-12 col-md-5 line">
+                <div class="col-xs-4 col-md-5 line">
                 </div>
             </div>
                   <div class="row" id="service">

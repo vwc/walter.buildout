@@ -1,7 +1,7 @@
 /*!
  * example
  */
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html
 {
     font-family: sans-serif;
@@ -22,6 +22,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary
@@ -50,7 +51,7 @@ template
 }
 a
 {
-    background: transparent;
+    background-color: transparent;
 }
 a:active,
 a:hover
@@ -234,9 +235,12 @@ th
 {
     padding: 0;
 }
+/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print
 {
-    *
+    *,
+  *:before,
+  *:after
     {
         color: #000 !important;
         background: transparent !important;
@@ -354,7 +358,8 @@ th
 {
     content: '\2b';
 }
-.glyphicon-euro:before
+.glyphicon-euro:before,
+.glyphicon-eur:before
 {
     content: '\20ac';
 }
@@ -1715,11 +1720,6 @@ blockquote.pull-right .small:after
 {
     content: '\00A0 \2014';
 }
-blockquote:before,
-blockquote:after
-{
-    content: '';
-}
 address
 {
     font-style: normal;
@@ -2918,6 +2918,8 @@ table th[class*='col-']
 .table-responsive
 {
     overflow-x: auto;
+
+    min-height: .01%;
 }
 @media screen and (max-width: 767px)
 {
@@ -5031,10 +5033,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn
 
     -webkit-overflow-scrolling: touch;
 }
-.navbar-collapse.in
-{
-    overflow-y: auto;
-}
 @media (min-width: 768px)
 {
     .navbar-collapse
@@ -6271,15 +6269,6 @@ a.thumbnail.active
          -o-animation: progress-bar-stripes 2s linear infinite;
             animation: progress-bar-stripes 2s linear infinite;
 }
-.progress-bar[aria-valuenow='0']
-{
-    min-width: 30px;
-
-    color: #777;
-    background-color: transparent;
-    background-image: none;
-    box-shadow: none;
-}
 .progress-bar-success
 {
     background-color: #5cb85c;
@@ -6320,14 +6309,7 @@ a.thumbnail.active
     background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
     background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
 }
-.media,
-.media-body
-{
-    overflow: hidden;
-    zoom: 1;
-}
-.media,
-.media .media
+.media
 {
     margin-top: 15px;
 }
@@ -6335,21 +6317,36 @@ a.thumbnail.active
 {
     margin-top: 0;
 }
-.media-object
+.media-right,
+.media > .pull-right
 {
-    display: block;
+    padding-left: 10px;
+}
+.media-left,
+.media > .pull-left
+{
+    padding-right: 10px;
+}
+.media-left,
+.media-right,
+.media-body
+{
+    display: table-cell;
+
+    vertical-align: top;
+}
+.media-middle
+{
+    vertical-align: middle;
+}
+.media-bottom
+{
+    vertical-align: bottom;
 }
 .media-heading
 {
-    margin: 0 0 5px;
-}
-.media > .pull-left
-{
-    margin-right: 10px;
-}
-.media > .pull-right
-{
-    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 .media-list
 {
@@ -6837,7 +6834,8 @@ a.list-group-item-danger.active:focus
 {
     border-bottom: 0;
 }
-.panel-group .panel-heading + .panel-collapse > .panel-body
+.panel-group .panel-heading + .panel-collapse > .panel-body,
+.panel-group .panel-heading + .panel-collapse > .list-group
 {
     border-top: 1px solid #ddd;
 }
@@ -7000,7 +6998,8 @@ a.list-group-item-danger.active:focus
 .embed-responsive .embed-responsive-item,
 .embed-responsive iframe,
 .embed-responsive embed,
-.embed-responsive object
+.embed-responsive object,
+.embed-responsive video
 {
     position: absolute;
     top: 0;
@@ -7092,7 +7091,7 @@ button.close
 .modal
 {
     position: fixed;
-    z-index: 1050;
+    z-index: 1040;
     top: 0;
     right: 0;
     bottom: 0;
@@ -7111,13 +7110,17 @@ button.close
        -moz-transition:    -moz-transform .3s ease-out;
          -o-transition:      -o-transform .3s ease-out;
             transition:         transform .3s ease-out;
-    -webkit-transform: translate3d(0, -25%, 0);
-            transform: translate3d(0, -25%, 0);
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+         -o-transform: translate(0, -25%);
+            transform: translate(0, -25%);
 }
 .modal.in .modal-dialog
 {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+         -o-transform: translate(0, 0);
+            transform: translate(0, 0);
 }
 .modal-open .modal
 {
@@ -7147,7 +7150,6 @@ button.close
 .modal-backdrop
 {
     position: fixed;
-    z-index: 1040;
     top: 0;
     right: 0;
     bottom: 0;
@@ -7550,12 +7552,10 @@ button.close
 .carousel
 {
     position: relative;
-
-    height: 415px;
 }
 .carousel-inner
 {
-    position: absolute;
+    position: relative;
 
     overflow: hidden;
 
@@ -7657,7 +7657,6 @@ button.close
     left: 0;
 
     width: 15%;
-    padding-top: 17%;
 
     text-align: center;
 
@@ -7667,10 +7666,26 @@ button.close
 
     filter: alpha(opacity=50);
 }
+.carousel-control.left
+{
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
+    background-repeat: repeat-x;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
 .carousel-control.right
 {
     right: 0;
     left: auto;
+
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
+    background-repeat: repeat-x;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
 .carousel-control:hover,
 .carousel-control:focus
@@ -7727,12 +7742,13 @@ button.close
 }
 .carousel-indicators
 {
+    position: absolute;
     z-index: 15;
     bottom: 10px;
     left: 50%;
 
-    width: 100%;
-    margin-top: -10px;
+    width: 60%;
+    margin-left: -30%;
     padding-left: 0;
 
     list-style: none;
@@ -7741,9 +7757,10 @@ button.close
 }
 .carousel-indicators li
 {
-    visibility: hidden;
+    display: inline-block;
 
     width: 10px;
+    height: 10px;
     margin: 1px;
 
     cursor: pointer;
@@ -7756,9 +7773,8 @@ button.close
 }
 .carousel-indicators .active
 {
-    visibility: hidden;
-
     width: 12px;
+    height: 12px;
     margin: 0;
 
     background-color: #fff;
@@ -15075,849 +15091,260 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 /**
  * styles for walter.sitetheme
  */
-/**
- * header
- */
-/* navbar */
-.section-kontakt h2
+body
 {
-    font-weight: bolder;
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
-.section-kontakt h3
+nav
 {
-    font-weight: bolder;
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.app-box-body h3,
+img
+{
+    padding-right: 3rem;
+    padding-left: 3rem;
 }
 .app-box-body p
 {
-    font-size: 1.2em;
+    font-size: 2rem;
+
+    padding: 3rem;
 }
-.navbar-inverse .navbar-toggle ul
+.navbar-nav li .star
 {
-    margin-top: 100px;
+    margin-top: 1rem;
+}
+.navbar-nav li a
+{
+    padding: 1rem;
+}
+.app-brandbar
+{
+    position: relative;
+    z-index: 2;
+
+    min-height: 26rem;
+    margin-top: -26rem;
+
+    background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
+}
+.app-background
+{
+    position: relative;
+    z-index: 1;
+
+    min-height: 26rem;
+    margin-top: -18.2rem;
+
+    background: url(../../img/bo_play_pattern.png) 0 0 repeat transparent;
 }
 .navbar-collapse
 {
-    position: relative;
-    z-index: 12;
+    margin-top: -10rem;
 
-    overflow-x: visible;
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
-#logobar
+.navbar-collapse .logobar
+{
+    position: relative;
+    z-index: 4;
+}
+.navbar-collapse #logo
+{
+    position: relative;
+    z-index: 3;
+}
+.navbar-collapse #navigationbar
+{
+    position: relative;
+    z-index: 8;
+    top: -15rem;
+
+    margin-bottom: 2rem;
+}
+.navbar-collapse #navigationbar .menu-left
 {
     position: relative;
     z-index: 4;
 
-    margin-top: -10em;
-}
-.app-navbar
-{
     background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
-.navbar-nav li .star
+.navbar-collapse #navigationbar .menu-right
 {
-    margin-top: 17px;
+    position: relative;
+    z-index: 4;
+
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
 }
 #zacken
 {
     position: relative;
     z-index: 3;
-    top: -21em;
+    top: -15rem;
 
-    width: 100%;
-    height: 1em;
+    min-width: 100%;
+    min-height: 1rem;
 
     background: url(../../img/zacken.png) 50% 100% repeat-x transparent;
-}
-.section-front-page #zacken-rotate
-{
-    position: relative;
-    z-index: 7;
-    top: -1em;
-
-    width: 100%;
-    height: 1em;
-
-    background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
 }
 #zacken-rotate
 {
     position: relative;
     z-index: 7;
-    top: -1em;
+    top: -1rem;
 
-    width: 100%;
-    height: 1em;
+    min-width: 100%;
+    min-height: 1rem;
 
     background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
 }
 #headericon
 {
-    width: 100%;
-    height: 5em;
-    margin-top: 2em;
-
-    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+    margin-top: 2rem;
 }
-.section-kontakt #headericon
+#content-core p
 {
-    position: relative;
-
-    width: 100%;
-    height: 5em;
-    margin-top: 1em;
-
-    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+    font-size: 2rem;
 }
-.section-bestellung #headericon
+#content-core h1
 {
-    position: relative;
+    font-size: 5rem;
+    font-weight: bolder;
 
-    width: 100%;
-    height: 5em;
-    margin-top: 1em;
+    margin-bottom: 4rem;
 
-    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+    color: #637173;
+    text-shadow: 2px 3px #fff;
 }
-.section-bestand #headericon
+#content-core a
 {
-    position: relative;
-
-    width: 100%;
-    height: 5em;
-    margin-top: 1em;
-
-    background: url(../../img/muster.png) 50% 100% no-repeat transparent;
+    color: #cfb02a;
 }
-@media (max-width: 380px)
+#content-core a:hover
 {
-    .logo
-    {
-        background: none;
-    }
-    #zacken
-    {
-        background: none;
-    }
-    .carousel
-    {
-        height: 120px;
-        max-height: 0;
-    }
-    .section-front-page .app-header
-    {
-        margin-top: 15em;
-    }
-    .navbar-collapse
-    {
-        position: relative;
+    text-decoration: none;
 
-        width: 100%;
-
-        background: url(../../img/background.jpg) 0 0 repeat transparent;
-    }
-    .navbar-collapse .navbar-nav
-    {
-        margin-left: 1em;
-    }
-    .app-header
-    {
-        margin-top: 0;
-    }
-    .contentline
-    {
-        position: center;
-
-        margin-bottom: 3em;
-
-        list-style: none;
-    }
-    .contentline .line
-    {
-        height: 2em;
-        padding-bottom: 0;
-    }
-    .contentline .lineheader h1
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 3.5em;
-
-        text-align: center;
-
-        color: #cfb02a;
-        text-shadow: -1px -2px #7e6b18;
-    }
-    .karusell
-    {
-        position: relative;
-        z-index: 2;
-
-        width: 100%;
-        margin-top: 4em;
-        margin-bottom: -2em;
-    }
-    .karusell a.left.carousel-control span img
-    {
-        height: 2em;
-    }
-    .karusell a.right.carousel-control span img
-    {
-        height: 2em;
-    }
-    .app-box-body
-    {
-        padding: 3% 15% 10%;
-    }
-    .section-front-page #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: 1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .section-front-page #headericon
-    {
-        position: relative;
-        z-index: 8;
-
-        width: 100%;
-        height: 10em;
-        margin-top: -23em;
-
-        background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
-        background-size: 25%;
-    }
-    .section-front-page #app-header
-    {
-        margin-top: 0;
-    }
-    .section-front-page #zacken
-    {
-        top: 0;
-    }
-    #zacken
-    {
-        top: 0;
-    }
-    #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: -1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .documentDescription
-    {
-        margin-top: 9em;
-    }
-    .documentFirstHeading
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 5em;
-
-        position: relative;
-        z-index: 3;
-        top: -4em;
-
-        text-align: center;
-
-        color: #fff;
-    }
-    .app-brandbar
-    {
-        position: relative;
-        z-index: 2;
-
-        height: 18em;
-        margin-top: 2.2em;
-
-        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
-    }
-    #logobar
-    {
-        position: relative;
-
-        margin-top: 5em;
-    }
-    .navbar-nav > li > a
-    {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        padding-left: .5em;
-    }
-    .app-navbar
-    {
-        min-height: 6em;
-        max-height: 6em;
-    }
-    #navigationbar
-    {
-        position: relative;
-        z-index: 5;
-
-        min-width: 360px;
-        margin: -2em 0 -2em -2em;
-        padding-top: 1em;
-        padding-bottom: 3em;
-
-        background: url(../../img/background.jpg) 0 0 repeat transparent;
-    }
-    #navigationbar ul li a
-    {
-        width: 100%;
-    }
-    .section-front-page .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -9em;
-        left: 25%;
-
-        display: hidden;
-
-        height: 18em;
-
-        background: url(../../img/logobutton_big.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
-    }
-    .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -9em;
-        left: 25%;
-
-        display: hidden;
-
-        height: 18em;
-
-        background: url(../../img/contentlogo.png) 30% 50% no-repeat transparent;
-        background-size: 50%;
-    }
+    color: #333;
 }
-@media (max-width: 980px) and (min-width: 381px)
+#content-core hr
 {
-    #karusellbackground
-    {
-        height: 18em;
-    }
-    .section-front-page #zacken
-    {
-        top: -20em;
-    }
-    .section-front-page #zacken-rotate
-    {
-        top: -1em;
-    }
-    .carousel
-    {
-        height: 0;
-        max-height: 0;
-    }
-    .contentline
-    {
-        position: center;
-
-        margin-bottom: 3em;
-
-        list-style: none;
-    }
-    .contentline .line
-    {
-        height: 2em;
-        padding-bottom: 0;
-    }
-    .contentline .lineheader h1
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 3.5em;
-
-        text-align: center;
-
-        color: #cfb02a;
-        text-shadow: -1px -2px #7e6b18;
-    }
-    .karusell
-    {
-        position: relative;
-        z-index: 2;
-
-        width: 100%;
-        margin-top: 10em;
-    }
-    .app-box-body
-    {
-        padding: 3% 15% 10%;
-    }
-    .section-front-page #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: -1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .section-front-page #headericon
-    {
-        position: relative;
-        z-index: 8;
-
-        width: 100%;
-        height: 10em;
-        margin-top: -8em;
-
-        background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
-        background-size: 25%;
-    }
-    #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: -1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .section-front-page .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -7em;
-        left: 30%;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
-        background-size: 40%;
-    }
-    .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -9em;
-        left: -30%;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/contentlogo.png) 100% 0 no-repeat transparent;
-        background-size: 40%;
-    }
-    .documentFirstHeading
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 5em;
-
-        position: relative;
-        z-index: 3;
-        top: -4em;
-
-        text-align: center;
-
-        color: #fff;
-    }
-    .app-brandbar
-    {
-        position: relative;
-        z-index: 2;
-
-        height: 17em;
-        margin-top: 8.5em;
-
-        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
-    }
-    #logobar
-    {
-        position: relative;
-
-        margin-top: 5em;
-    }
-    .navbar-nav > li > a
-    {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        padding-left: .5em;
-    }
-    .app-navbar
-    {
-        min-height: 6em;
-        max-height: 6em;
-    }
-    #navigationbar
-    {
-        position: relative;
-
-        padding-top: 0;
-        padding-bottom: 3em;
-    }
-    .abstand
-    {
-        width: 0;
-    }
-    .nav .navbar-nav .left
-    {
-        float: left;
-    }
-    nav .navbar-nav .right
-    {
-        float: right;
-    }
-}
-@media (max-width: 768px) and (min-width: 768px)
-{
-    #karusellbackground
-    {
-        height: 14em;
-    }
-    .contentline
-    {
-        position: center;
-
-        margin-bottom: 3em;
-
-        list-style: none;
-    }
-    .contentline .line
-    {
-        height: 2em;
-        padding-bottom: 0;
-    }
-    .contentline .lineheader h1
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 3.5em;
-
-        text-align: center;
-
-        color: #cfb02a;
-        text-shadow: -1px -2px #7e6b18;
-    }
-    .karusell
-    {
-        position: relative;
-        z-index: 2;
-
-        width: 100%;
-        margin-top: 10em;
-    }
-    .app-box-body
-    {
-        padding: 3% 15% 10%;
-    }
-    .section-front-page #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: -1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .section-front-page #headericon
-    {
-        position: relative;
-        z-index: 8;
-
-        width: 100%;
-        height: 10em;
-        margin-top: -18em;
-
-        background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
-        background-size: 25%;
-    }
-    .section-front-page #zacken
-    {
-        top: -21em;
-    }
-    #zacken-rotate
-    {
-        position: relative;
-        z-index: 7;
-        top: -1em;
-
-        width: 100%;
-        height: 1em;
-
-        background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
-    }
-    .section-front-page .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -7em;
-        left: 30%;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/logobutton_big.png) 0 0 no-repeat transparent;
-        background-size: 35%;
-    }
-    .app-header .logobutton
-    {
-        margin-top: -5em;
-    }
-    .logo
-    {
-        position: relative;
-        z-index: 6;
-        top: -9em;
-        left: 30%;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/contentlogo.png) 0 0 no-repeat transparent;
-        background-size: 40%;
-    }
-    .documentFirstHeading
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 5em;
-
-        position: relative;
-        z-index: 3;
-        top: -4em;
-
-        text-align: center;
-
-        color: #fff;
-    }
-    .app-brandbar
-    {
-        position: relative;
-        z-index: 2;
-
-        height: 18em;
-        margin-top: 8.5em;
-
-        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
-    }
-    #logobar
-    {
-        position: relative;
-
-        margin-top: 5em;
-    }
-    .navbar-nav > li > a
-    {
-        padding-top: 14px;
-        padding-bottom: 14px;
-        padding-left: .5em;
-    }
-    .app-navbar
-    {
-        min-height: 6em;
-        max-height: 6em;
-    }
-    #navigationbar
-    {
-        position: relative;
-
-        padding-top: 1em;
-        padding-bottom: 3em;
-    }
-    .abstand
-    {
-        width: 0;
-    }
-    .nav .navbar-nav .left
-    {
-        float: left;
-    }
-    nav .navbar-nav .right
-    {
-        float: right;
-    }
-}
-@media (min-width: 981px)
-{
-    .contentline
-    {
-        position: center;
-
-        margin-bottom: 3em;
-
-        list-style: none;
-    }
-    .contentline .line
-    {
-        height: 2em;
-        padding-bottom: 4em;
-
-        background: url(../../img/line.png) 50% 100% no-repeat transparent;
-    }
-    .contentline .lineheader h1
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 3.5em;
-
-        text-align: center;
-
-        color: #cfb02a;
-        text-shadow: -1px -2px #7e6b18;
-    }
-    .app-box-body
-    {
-        padding: 0;
-    }
-    .karusell
-    {
-        position: relative;
-        z-index: 2;
-
-        width: 100%;
-        margin-top: -23em;
-    }
-    .nav .navbar-nav .left
-    {
-        float: left;
-    }
-    nav .navbar-nav .right
-    {
-        float: right;
-    }
-    .section-front-page .logo
-    {
-        position: relative;
-        top: -13em;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/logobutton_big.png) 100% 0 no-repeat transparent;
-    }
-    .logo
-    {
-        position: relative;
-        top: -13em;
-
-        display: block;
-
-        height: 18em;
-
-        background: url(../../img/contentlogo.png) 100% 0 no-repeat transparent;
-    }
-    .section-front-page #headericon
-    {
-        position: relative;
-        z-index: 8;
-
-        width: 100%;
-        height: 10em;
-        margin-top: -7.5em;
-
-        background: url(../../img/logobuttonsmall.png) 50% 50% no-repeat transparent;
-    }
-    .documentFirstHeading
-    {
-        font-family: 'Brush Script MT', 'italic';
-        font-size: 5em;
-
-        position: relative;
-        z-index: 3;
-        top: -4em;
-
-        text-align: center;
-
-        color: #fff;
-    }
-    .app-brandbar
-    {
-        position: relative;
-        z-index: 2;
-
-        height: 16em;
-        margin-top: -23em;
-
-        background: url(../../img/altern_background.jpg) 50% 0 no-repeat transparent;
-    }
-    #navigationbar
-    {
-        position: relative;
-
-        padding-top: 3em;
-        padding-bottom: 13em;
-    }
-}
-@media (min-width: 1300px)
-{
-    .karusell
-    {
-        position: relative;
-        z-index: 2;
-
-        width: 1280px;
-        margin-top: -23em;
-    }
-}
-#facebook
-{
-    z-index: 3;
-    top: 0;
-
-    float: right;
-
-    width: 50px;
-    height: 100px;
-
-    background: url(../../img/fbbanner.png) 50% 0 no-repeat transparent;
-
-    positon: relative;
-}
-/**
- * body
- */
-body
-{
-    margin: 0;
-
-    background: url(../../img/background.jpg) 0 0 repeat transparent;
+    border: 1px solid #313337;
 }
 .documentDescription
 {
     font-size: 2em;
 
-    margin-top: -4em;
-    margin-bottom: 2em;
+    margin-top: 20rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+
+    border-width: 0 0 14px;
+    border-style: solid;
+    -webkit-border-image: url(../../img/description.png) 27 repeat;
+       -moz-border-image: url(../../img/description.png) 27 repeat;
+         -o-border-image: url(../../img/description.png) 27 repeat;
+            border-image: url(../../img/description.png) 27 fill repeat;
 }
-/* frontpage */
+.documentFirstHeading
+{
+    font-family: 'Brush Script MT', 'italic';
+    font-size: 6rem;
+
+    position: relative;
+    z-index: 9;
+
+    text-align: center;
+
+    color: #fff;
+}
+.section-front-page #zacken-rotate
+{
+    position: relative;
+    z-index: 7;
+    top: -19rem;
+
+    min-width: 100%;
+    min-height: 1rem;
+
+    background: url(../../img/zacken-rotate.png) 50% 100% repeat-x transparent;
+}
+.section-front-page #headericon
+{
+    position: relative;
+    z-index: 9;
+    top: -30rem;
+}
+.section-werkstatt .pictures .pic1
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
+}
+.section-werkstatt .pictures .pic2
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
+}
+.section-werkstatt .pictures .pic3
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
+}
+.section-special-cars .pictures .pic1
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
+}
+.section-special-cars .pictures .pic2
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
+}
+.section-special-cars .pictures .pic3
+{
+    max-width: 33%;
+    min-height: 29rem;
+    max-height: 29rem;
+
+    background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
+}
 .app-header
 {
-    margin-top: 4em;
+    margin-top: -24rem;
 }
 .app-header .logobutton
 {
-    height: 7em;
+    height: 12rem;
     padding-top: 20%;
 
     background: url(../../img/icon_beschreibungstext.png) 50% 50% no-repeat transparent;
 }
 .app-header p
 {
-    font-size: 1.9em;
+    font-size: 2.9rem;
 
     text-transform: uppercase;
+}
+.app-header a
+{
+    font-size: .6em;
+
+    color: #fff;
 }
 .app-header #fb
 {
@@ -15929,32 +15356,46 @@ body
 
     background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
 }
-.app-header a
+.contentline
 {
-    font-size: .6em;
+    position: center;
 
-    color: #fff;
+    margin-bottom: 3rem;
+
+    list-style: none;
+}
+.contentline .line
+{
+    padding-bottom: 6rem;
+
+    background: url(../../img/line.png) 50% 100% no-repeat transparent;
+}
+.contentline .lineheader h1
+{
+    font-family: 'Brush Script MT', 'italic';
+    font-size: 6rem;
+
+    text-align: center;
+
+    color: #cfb02a;
+    text-shadow: -1px -2px #7e6b18;
+}
+.deco
+{
+    padding: 10px 55px 10px 55px;
 }
 #service
 {
-    margin-top: 4em;
-    margin-bottom: 2em;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
 }
 #service ul
 {
     list-style: none;
 }
-#service .extra
-{
-    border-width: 0 4px 0 0;
-    border-style: solid;
-    -webkit-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
-         -o-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
-            border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
-}
 #service a
 {
-    font-size: 1.4em;
+    font-size: 2rem;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -15973,45 +15414,69 @@ body
 {
     color: #629294;
 }
-.deco
+#service .extra
 {
-    padding: 10px 55px 10px 55px;
+    border-width: 0 4px 0 0;
+    border-style: solid;
+    -webkit-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+         -o-border-image: url(../../img/trennline_horiz.png) 0 4 repeat;
+            border-image: url(../../img/trennline_horiz.png) 0 4 fill repeat;
 }
-#werkstatt
+.navbar-header
 {
-    margin-top: 5em;
+    position: relative;
+    z-index: 14;
+
+    margin-bottom: 4rem;
+
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+.faceb
+{
+    background: url(../../img/background.jpg) 0 0 repeat transparent;
+}
+#facebook
+{
+    z-index: 18;
+    top: 0;
+
+    float: right;
+
+    min-width: 50px;
+    min-height: 100px;
+
+    background: url(../../img/fbbanner.png) 50% 0 no-repeat transparent;
+
+    positon: relative;
 }
 #werkbody .logobuttonw
 {
-    height: 7em;
+    height: 12rem;
     padding-top: 20%;
 
     background: url(../../img/toolbutton.png) 50% 50% no-repeat transparent;
 }
 #werkbody p
 {
-    font-size: 1.9em;
+    font-size: 2.9rem;
 
     text-transform: uppercase;
 }
 #werkbody .arrow
 {
-    padding: 10px 32px 5px 38px;
+    padding: 10px 35px 7px 30px;
 
     background: url(../../img/arrow_long.png) 100% 100% no-repeat transparent;
 }
 #werkbody a
 {
-    font-size: .6em;
+    font-size: 1.5rem;
 
     color: #fff;
 }
-/**
- * footer
- */
 .app-footer
 {
-    padding-top: 100px;
+    padding-top: 10rem;
 
     color: #fff;
     background-color: #313337;
@@ -16022,29 +15487,30 @@ body
 }
 .app-footer img
 {
-    margin-right: 10px;
+    margin-right: 2rem;
 }
 #footerlogo
 {
-    margin-bottom: -2.4em;
+    margin-bottom: -4rem;
 }
 #footernav
 {
-    font-size: 1em;
+    font-size: 1.5rem;
 
     max-width: 960px;
 }
 #footernav a
 {
-    font-size: 1em;
+    font-size: 1.5rem;
 
-    padding: 2px;
+    padding-top: 1rem;
 
     text-decoration: none;
 }
 #footernav a:hover
 {
-    padding: 2px;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
 
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
@@ -16059,42 +15525,12 @@ body
 {
     display: inline-block;
 
-    padding-left: 5px;
-}
-.part
-{
-    text-align: center;
-}
-@media (max-width: 981px)
-{
-  /*  .section-front-page {
-    #zacken-rotate {
-      top: -1em;
-    }
-    #headericon {
-      margin-top: -7.5em;
-    }
-    #zacken {
-      top: -20em;
-    }
-    .app-header .logobutton {
-      margin-top: -2em;
-    }
-  }*/
-    .part
-    {
-        margin-bottom: 1em;
-    }
-    #service .extra
-    {
-        border-style: none;
-        border-image: none;
-    }
+    padding-left: 1rem;
 }
 #footerline
 {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 #footerline .dotline
 {
@@ -16110,687 +15546,200 @@ body
 
     background: url(../../img/star_trio.png) 50% 50% no-repeat transparent;
 }
-.section-bestand #content-core a
+.part
 {
-    color: #cfb02a;
+    text-align: center;
 }
-.section-bestand #content-core a:hover
-{
-    text-decoration: none;
-
-    color: #313337;
-}
-.section-bestand .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: -5em;
-    margin-bottom: 2em;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-bestand #content-core
-{
-    font-size: 1.5em;
-
-    margin-bottom: 2em;
-}
-.section-bestand #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-bestellung #content-core a
-{
-    color: #cfb02a;
-}
-.section-bestellung #content-core a:hover
-{
-    text-decoration: none;
-
-    color: #313337;
-}
-.section-bestellung .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: -5em;
-    margin-bottom: 2em;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-bestellung #content-core
-{
-    font-size: 1.5em;
-
-    margin-bottom: 2em;
-}
-.section-bestellung #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-bestellung #content-core hr
-{
-    border: 1px solid #313337;
-}
-.section-kontakt a
-{
-    color: #cfb02a;
-}
-.section-kontakt a:hover
-{
-    text-decoration: none;
-
-    color: #313337;
-}
-.section-kontakt .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: -4em;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-kontakt #content-core
-{
-    font-size: 1.5em;
-
-    margin-bottom: 2em;
-}
-.section-kontakt #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-werkstatt #headericon
+.karusell
 {
     position: relative;
-
-    margin-top: 1em;
-}
-.section-werkstatt .documentFirstHeading
-{
-    margin-top: .5em;
-}
-.section-werkstatt .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: -4em;
-    margin-bottom: 0;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-werkstatt #content-core
-{
-    font-size: 1.5em;
-}
-.section-werkstatt #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-werkstatt #content-core h2
-{
-    text-shadow: 2px 2px #fff;
-}
-.section-werkstatt .pictures .pic1
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
-}
-.section-werkstatt .pictures .pic2
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
-}
-.section-werkstatt .pictures .pic3
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
-}
-.section-idee #headericon
-{
-    position: relative;
-
-    margin-top: 1em;
-}
-.section-idee .documentFirstHeading
-{
-    top: 0;
-    left: -34%;
-
-    margin-top: -3.5em;
-}
-.section-idee .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: 5em;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-idee #content-core
-{
-    font-size: 1.5em;
-}
-.section-idee #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-idee .pictures .pic1
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
-}
-.section-idee .pictures .pic2
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
-}
-.section-idee .pictures .pic3
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
-}
-.section-special-cars #headericon
-{
-    position: relative;
-
-    margin-top: 1em;
-}
-.section-special-cars .documentFirstHeading
-{
-    font-size: 4em;
-
-    top: -1em;
-    left: -34%;
-
-    margin-top: -3.5em;
-}
-.section-special-cars .documentDescription
-{
-    font-size: 2em;
-
-    margin-top: 4em;
-    margin-bottom: 0;
-    padding-bottom: 1em;
-
-    border-width: 0 0 14px;
-    border-style: solid;
-    -webkit-border-image: url(../../img/description.png) 27 repeat;
-       -moz-border-image: url(../../img/description.png) 27 repeat;
-         -o-border-image: url(../../img/description.png) 27 repeat;
-            border-image: url(../../img/description.png) 27 fill repeat;
-}
-.section-special-cars #content-core
-{
-    font-size: 1.5em;
-}
-.section-special-cars #content-core h1
-{
-    font-size: 2em;
-    font-weight: bolder;
-
-    margin-bottom: 1em;
-
-    color: #637173;
-    text-shadow: 2px 3px #fff;
-}
-.section-special-cars .pictures .pic1
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
-}
-.section-special-cars .pictures .pic2
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
-}
-.section-special-cars .pictures .pic3
-{
-    width: 33%;
-    height: 18em;
-
-    background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
-}
-@media (min-width: 768px) and (max-width: 980px)
-{
-    .section-werkstatt #headericon
-    {
-        margin-top: 1em;
-    }
-    .section-werkstatt .documentFirstHeading
-    {
-        font-size: 4em;
-
-        top: -5em;
-    }
-    .section-werkstatt .documentDescription
-    {
-        font-size: 2em;
-
-        position: relative;
-        top: 0;
-
-        margin-top: -5em;
-        margin-bottom: 2em;
-    }
-    .section-werkstatt #content-core
-    {
-        font-size: 1.5em;
-    }
-    .section-werkstatt #content-core h1
-    {
-        font-size: 2em;
-        font-weight: bolder;
-
-        margin-bottom: 1em;
-
-        color: #637173;
-        text-shadow: 2px 3px #fff;
-    }
-    .section-werkstatt .pictures .pic1
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/werkstatt_pic1.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-werkstatt .pictures .pic2
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/werkstatt_pic2.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-werkstatt .pictures .pic3
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/werkstatt_pic3.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-idee .documentFirstHeading
-    {
-        top: -3.5em;
-        left: -3%;
-
-        margin-top: 0;
-    }
-    .section-idee .documentDescription
-    {
-        margin-top: -4em;
-        margin-bottom: 2em;
-    }
-    .section-idee #content-core
-    {
-        font-size: 1.5em;
-    }
-    .section-idee #content-core h1
-    {
-        font-size: 2em;
-        font-weight: bolder;
-
-        margin-bottom: 1em;
-
-        color: #637173;
-        text-shadow: 2px 3px #fff;
-    }
-    .section-idee .pictures .pic1
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-idee .pictures .pic2
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/idee2.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-idee .pictures .pic3
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/idee1.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-special-cars #headericon
-    {
-        position: relative;
-
-        margin-top: 1em;
-    }
-    .section-special-cars .documentFirstHeading
-    {
-        font-size: 4em;
-
-        top: -2.5em;
-        left: 0;
-    }
-    .section-special-cars .documentDescription
-    {
-        font-size: 2em;
-
-        position: relative;
-        top: -3.5em;
-
-        margin-bottom: -2em;
-    }
-    .section-special-cars #content-core
-    {
-        font-size: 1.5em;
-    }
-    .section-special-cars #content-core h1
-    {
-        font-size: 2em;
-        font-weight: bolder;
-
-        margin-bottom: 1em;
-
-        color: #637173;
-        text-shadow: 2px 3px #fff;
-    }
-    .section-special-cars .pictures .pic1
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/special-cars1.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-special-cars .pictures .pic2
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/special-cars2.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-    .section-special-cars .pictures .pic3
-    {
-        width: 33%;
-        height: 10em;
-
-        background: url(../../img/special-cars3.png) 50% 60% no-repeat transparent;
-        background-size: 90%;
-    }
-}
-@media (max-width: 381px)
-{
-    .section-werkstatt .documentFirstHeading
-    {
-        font-size: 4em;
-
-        top: -5em;
-
-        margin-top: 0;
-    }
-    .section-werkstatt .documentDescription
-    {
-        position: relative;
-        top: 0;
-
-        margin-top: -3em;
-        margin-bottom: 2em;
-    }
-    .section-werkstatt #content-core
-    {
-        margin-bottom: 0;
-    }
-    .section-werkstatt #content-core h1
-    {
-        font-size: 1.7em;
-    }
-    .section-werkstatt .pictures
-    {
-        position: relative;
-        top: 0;
-    }
-    .section-werkstatt .pictures .pic1
-    {
-        width: 0;
-        height: 0;
-
-        background-size: 0;
-    }
-    .section-werkstatt .pictures .pic2
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/werkstatt_pic2.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-werkstatt .pictures .pic3
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/werkstatt_pic3.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-idee .documentFirstHeading
-    {
-        font-size: 4em;
-
-        top: -5em;
-        left: 0;
-
-        margin-top: 0;
-    }
-    .section-idee .documentDescription
-    {
-        position: relative;
-        top: 0;
-
-        margin-top: -3em;
-        margin-bottom: 2em;
-    }
-    .section-idee #content-core
-    {
-        margin-bottom: 0;
-    }
-    .section-idee #content-core h1
-    {
-        font-size: 1.7em;
-    }
-    .section-idee .pictures
-    {
-        width: 100%;
-        height: 0;
-    }
-    .section-idee .pictures .pic1
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-idee .pictures .pic2
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/idee2.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-idee .pictures .pic3
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/idee1.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-special-cars #headericon
-    {
-        margin-top: 2em;
-    }
-    .section-special-cars .documentFirstHeading
-    {
-        font-size: 3em;
-
-        top: -6em;
-        left: 0;
-
-        margin-top: 0;
-    }
-    .section-special-cars .documentDescription
-    {
-        position: relative;
-        top: 0;
-
-        margin-top: -3em;
-        margin-bottom: 3em;
-    }
-    .section-special-cars #content-core
-    {
-        margin-bottom: 0;
-    }
-    .section-special-cars #content-core h1
-    {
-        font-size: 1.7em;
-    }
-    .section-special-cars .pictures
-    {
-        position: relative;
-        top: 0;
-    }
-    .section-special-cars .pictures .pic1
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/special-cars1.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-special-cars .pictures .pic2
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/special-cars2.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-    .section-special-cars .pictures .pic3
-    {
-        width: 0;
-        height: 0;
-
-        background: url(../../img/special-cars3.png) 100% 0 no-repeat transparent;
-        background-size: 0;
-    }
-}
-@media (max-width: 320px)
-{
-    #karusellbackground
-    {
-        height: 0;
-    }
-}
-@media (max-width: 980px)
-{
-    .carousel-indicators
-    {
-        margin-top: -34px;
-    }
+    z-index: 1;
 }
 #karusellbackground
 {
     position: relative;
+    top: -18rem;
 
     background: url(../../img/bo_play_pattern.png) 0 0 repeat transparent;
 }
-.carousel-indicators
+@media (max-width: 380px)
 {
-    margin-top: -19px;
+    .section-special-cars .pictures .pic1,
+  .section-special-cars .pictures .pic2,
+  .section-special-cars .pictures .pic3
+    {
+        visibility: hidden;
+
+        min-height: 0;
+        max-height: 0;
+
+        background-size: 0;
+    }
+    .section-werkstatt .pictures .pic1,
+  .section-werkstatt .pictures .pic2,
+  .section-werkstatt .pictures .pic3
+    {
+        visibility: hidden;
+
+        min-height: 0;
+        max-height: 0;
+
+        background-size: 0;
+    }
+    .documentFirstHeading
+    {
+        top: -25rem;
+    }
+    .documentDescription
+    {
+        margin-top: -5rem;
+    }
+    .section-front-page #zacken
+    {
+        top: 0;
+    }
+    .section-front-page #zacken-rotate
+    {
+        visibility: hidden;
+    }
+    .section-front-page #headericon
+    {
+        top: 0;
+    }
+    .section-front-page #headericon img
+    {
+        max-width: 0;
+    }
+    .app-header
+    {
+        margin-top: 0;
+    }
+    #karusellbackground
+    {
+        max-height: 0;
+    }
+    .carousel
+    {
+        visibility: hidden;
+    }
+    #zacken
+    {
+        top: 0rem;
+    }
+    .app-brandbar
+    {
+        margin-top: -3.2rem;
+    }
+    .app-brandbar
+    {
+        position: relative;
+        z-index: 2;
+
+        min-height: 26rem;
+        margin-top: -3.2rem;
+
+        background: url(../../img/altern_background.jpg) 50% 100% no-repeat transparent;
+    }
+    .app-background
+    {
+        position: relative;
+        z-index: 1;
+
+        min-height: 0;
+        margin-top: 0;
+
+        background: url(../../img/bo_play_pattern.png) 0 0 repeat transparent;
+    }
+    #zacken-rotate
+    {
+        visibility: hidden;
+    }
+    #headericon
+    {
+        top: 0;
+    }
+    #logo img
+    {
+        max-width: 0;
+    }
+    .navbar-collapse #navigationbar
+    {
+        top: 0;
+    }
+    .navbar-collapse #navigationbar .menu-left
+    {
+        margin-top: 0;
+    }
+    .navbar-collapse #navigationbar .menu-right
+    {
+        margin-top: 0;
+    }
 }
-.carousel
+@media (max-width: 980px)
 {
-    max-height: 390px;
+    #service .extra
+    {
+        border-style: none;
+        border-image: none;
+    }
+}
+@media (max-width: 980px) and (min-width: 381px)
+{
+    .section-special-cars .pictures .pic1,
+  .section-special-cars .pictures .pic2,
+  .section-special-cars .pictures .pic3
+    {
+        min-height: 23rem;
+        max-height: 23rem;
+
+        background-size: 90%;
+    }
+    .section-werkstatt .pictures .pic1,
+  .section-werkstatt .pictures .pic2,
+  .section-werkstatt .pictures .pic3
+    {
+        min-height: 23rem;
+        max-height: 23rem;
+
+        background-size: 90%;
+    }
+}
+@media (max-width: 769px)
+{
+    .contentline
+    {
+        position: center;
+
+        margin-bottom: 3rem;
+
+        list-style: none;
+    }
+    .contentline .line
+    {
+        padding-bottom: 0;
+
+        background: none;
+    }
+    .contentline .lineheader h1
+    {
+        font-family: 'Brush Script MT', 'italic';
+        font-size: 6rem;
+
+        text-align: center;
+
+        color: #cfb02a;
+        text-shadow: -1px -2px #7e6b18;
+    }
+}
+@media (min-width: 768px) and (max-width: 981px)
+{
+    .navbar-collapse .logobar
+    {
+        padding-bottom: 15rem;
+    }
+    #navigationbar
+    {
+        top: -15rem;
+    }
 }
 /*# sourceMappingURL=walter.css.map */
