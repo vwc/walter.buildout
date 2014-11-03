@@ -15114,6 +15114,8 @@ img
 .navbar-nav li .star
 {
     margin-top: 1rem;
+    padding-right: 0;
+    padding-left: 0;
 }
 .navbar-nav li a
 {
