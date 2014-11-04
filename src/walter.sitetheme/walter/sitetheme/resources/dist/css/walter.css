@@ -15489,7 +15489,8 @@ img
 }
 .app-footer img
 {
-    margin-right: 2rem;
+    padding-right: 1rem;
+    padding-left: 0rem;
 }
 #footerlogo
 {
@@ -15550,6 +15551,8 @@ img
 }
 .part
 {
+    padding-bottom: 2rem;
+
     text-align: center;
 }
 .karusell
